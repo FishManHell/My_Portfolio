@@ -1,12 +1,24 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
+    "outDir": "dist",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "outDir": "dist"
+    "baseUrl": ".",
+    "strict": false,
+//    "paths": {
+//      "*": ["./src/*"]
+//    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   },
   "include": ["src"]
 }
