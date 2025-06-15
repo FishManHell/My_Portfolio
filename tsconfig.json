@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
+    "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "es5",
@@ -10,15 +10,19 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "baseUrl": ".",
-    "strict": false,
-//    "paths": {
-//      "*": ["./src/*"]
-//    }
+    "strict": true,
+    "paths": {
+      "*": ["./src/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
   },
-  "include": ["src"]
+  "include": [
+    "./config/jest/jest-setup.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+  ]
 }

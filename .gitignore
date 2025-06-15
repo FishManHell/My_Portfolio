@@ -9,5 +9,8 @@ yarn-error.log*
 .pnp.js
 .DS_Store
 .vscode/*
-/dist
+/build
 package-lock.json
+*storybook.log
+storybook-static
+/coverage

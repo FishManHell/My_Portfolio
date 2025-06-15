@@ -1,0 +1,16 @@
+@use "reset";
+@use "themes/light";
+@use "themes/dark";
+
+
+body, .app {
+  color: var(--txt-color);
+  width: 100%;
+  max-width: var(--max-width-fhld);
+}
+
+.app{
+  background: var(--bg-color);
+}
+
+
