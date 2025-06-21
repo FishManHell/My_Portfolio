@@ -1,6 +1,4 @@
-import {BuildOptions} from "../types";
-
-export const tsLoaders = (options: BuildOptions) => {
+export const tsLoaders = () => {
     return {
         test: /\.tsx?$/,
         use: 'ts-loader',

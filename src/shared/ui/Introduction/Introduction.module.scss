@@ -1,0 +1,16 @@
+.introduction-title {
+  text-align: center;
+  font-size: 3.625rem;
+  width: 50%;
+  margin: 0 auto;
+
+  span {
+    font-size: inherit;
+    background: var(--gradient-color-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    margin: 0 5px;
+  }
+}

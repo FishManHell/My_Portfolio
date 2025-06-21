@@ -1,0 +1,22 @@
+.navbar {
+  width: inherit;
+  height: var( --navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.navbar-icon-links-container {
+  margin-right: 10px;
+}
+
+.navbar-icon-links-container-icon-link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+}

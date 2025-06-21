@@ -1,0 +1,14 @@
+.section-header {
+  text-align: center;
+
+  &__title {
+    font-size: var(--title-size);
+    color: var(--title-color-text);
+  }
+
+  &__subtitle {
+    font-size: var(--subtitle-size);
+    color: var(--txt-color);
+    margin-top: 10px;
+  }
+}

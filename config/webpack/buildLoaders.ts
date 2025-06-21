@@ -1,10 +1,16 @@
 import {BuildOptions} from "./types";
 import {tsLoaders} from "./loaders/tsLoaders";
-import webpack from "webpack";
+import {RuleSetRule} from "webpack";
 import {styleLoaders} from "./loaders/styleLoaders";
+import {svgLoaders} from "./loaders/svgLoader";
 
-export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
-    const tsLoader = tsLoaders(options);
-    const styleLoader = styleLoaders(options.isDev)
-    return [tsLoader, styleLoader]
+export const buildLoaders = ({isDev}: BuildOptions): RuleSetRule[] => {
+    const tsLoader = tsLoaders();
+    const styleLoader = styleLoaders(isDev);
+    const svgLoader = svgLoaders()
+    return [
+        svgLoader,
+        tsLoader,
+        styleLoader
+    ]
 }

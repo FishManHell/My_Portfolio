@@ -1,5 +1,11 @@
-.app-light-theme {
-  --bg-color: #F5F5F5;
+:root, .app-light-theme {
+  --bg-color: #FFFFFF;
+  --invert-bg-color: #191919;
   --txt-color: #666666;
-  --introduce-text-color: #42446E;
+  --title-color-text: #42446E;
+  --bg-card-color: #FFFFFF;
+  --txt-card-title-color: #000000;
+  --txt-tech-card-color: #42446E;
+  --bg-footer-line-color: #666666;
+  --invert-bg-footer-line-color: #42446E
 }

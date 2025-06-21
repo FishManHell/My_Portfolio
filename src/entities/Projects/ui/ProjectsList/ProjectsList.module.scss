@@ -1,0 +1,11 @@
+.projects-list {
+  margin-top: 120px;
+
+  &__project-item-container {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 60px;
+  }
+}

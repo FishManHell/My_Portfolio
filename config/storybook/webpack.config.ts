@@ -1,9 +1,9 @@
-import webpack, {RuleSetRule, DefinePlugin} from "webpack";
+import {RuleSetRule, DefinePlugin, Configuration} from "webpack";
 import path from "path";
 import {styleLoaders} from "../webpack/loaders/styleLoaders";
 import {BuildPaths} from "../webpack/types";
 
-export default ({config}: {config: webpack.Configuration}) => {
+export default ({config}: {config: Configuration}) => {
     const styleLoader = styleLoaders(true);
 
     const {src}: BuildPaths = {

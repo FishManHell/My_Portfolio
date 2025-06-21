@@ -1,4 +1,5 @@
 @use "reset";
+@use "variables/global";
 @use "themes/light";
 @use "themes/dark";
 
@@ -7,10 +8,16 @@ body, .app {
   color: var(--txt-color);
   width: 100%;
   max-width: var(--max-width-fhld);
+  margin: 0 auto;
 }
 
 .app{
   background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px 35px 10px;
 }
 
 
