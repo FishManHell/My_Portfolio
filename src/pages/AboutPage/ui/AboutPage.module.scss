@@ -1,3 +1,32 @@
 .about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
 
+.about-page-header {
+  width: 80%;
+}
+
+.about-page-experience, .about-page-education {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-page-experience,
+.about-page-education {
+  margin-top: 20px;
+}
+
+.about-page-experience-header,
+.about-page-education-header {
+  margin: 50px 0;
+
+  h2 {
+    font-size: var(--title-size);
+    color: var(--title-color-text);
+  }
 }

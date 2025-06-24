@@ -1,0 +1,74 @@
+.timeline-card {
+  height: 75px;
+  max-width: 700px;
+  width: 100%;
+  padding: 5px;
+  border-bottom: 2px solid gray;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.timeline-card-header,
+.timeline-card-meta,
+.timeline-card-meta-company,
+.timeline-card-meta-location,
+.timeline-card-meta-duration {
+  display: flex;
+  align-items: center;
+}
+
+.timeline-card-meta-company,
+.timeline-card-meta-location,
+.timeline-card-meta-duration {
+  svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+}
+
+.timeline-card-meta-company,
+.timeline-card-meta-location,
+.timeline-card-meta-duration,
+time {
+  font-size: 0.75rem;
+}
+
+.timeline-card-header, .timeline-card-meta {
+  justify-content: space-between;
+}
+
+.timeline-card-header-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--txt-card-title-color);
+
+}
+
+.timeline-card-header-type {
+  width: 84px;
+  height: 24px;
+  background: var(--tc-bg);
+  color: var(--tc-color);
+  border-radius: 100px;
+  text-align: center;
+  line-height: 1.25rem;
+}
+
+.timeline-card-header-type-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.timeline-card-meta {
+  margin-top: 10px;
+}
+
+.timeline-card-meta-company {
+  font-weight: 500;
+
+}
+

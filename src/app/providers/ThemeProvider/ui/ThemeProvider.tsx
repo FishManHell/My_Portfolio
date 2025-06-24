@@ -3,8 +3,6 @@ import {FC, ReactNode, useMemo, useState} from "react";
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT;
 
-console.log(defaultTheme, "defaultTheme")
-
 interface ThemeProviderProps {
     initialTheme?: Theme;
     children: ReactNode;

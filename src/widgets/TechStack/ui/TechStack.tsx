@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import cls from "./TechStack.module.scss"
 import {FC, SVGProps} from "react";
-import {SectionHeader} from "shared/ui/SectionHeader/SectionHeader";
+import {SectionHeader} from "shared/ui/SectionHeader";
 import {Icon} from "shared/ui/Icon";
 import HtmlIcon from "shared/assets/icons/Html.svg";
 import CssIcon from "shared/assets/icons/Css.svg";

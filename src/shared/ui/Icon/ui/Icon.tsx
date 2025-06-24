@@ -10,5 +10,5 @@ interface IconProps {
 export const Icon = (props: IconProps) => {
     const {className, Svg} = props;
 
-    return <Svg className={classNames(cls["icon"], className)} />;
+    return <Svg className={classNames(cls["icon"], className)}/>;
 };

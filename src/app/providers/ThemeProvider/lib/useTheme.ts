@@ -23,8 +23,6 @@ export function useTheme(): useThemeResult {
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     }
 
-    console.log(themeRes, "themeRes")
-
     useEffect(() => {
         if (!document.body.className.includes(themeRes)) {
             document.body.className = themeRes;

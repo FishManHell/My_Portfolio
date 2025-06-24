@@ -1,6 +1,6 @@
 import cls from "./ProjectsList.module.scss"
 import classNames from "classnames";
-import {SectionHeader} from "shared/ui/SectionHeader/SectionHeader";
+import {SectionHeader} from "shared/ui/SectionHeader";
 import {Project, ProjectItem} from "../ProjectItem/ProjectItem";
 import {useMemo} from "react";
 import {ProjectsData} from "entities/Projects";
