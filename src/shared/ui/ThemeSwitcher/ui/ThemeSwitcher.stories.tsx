@@ -2,7 +2,7 @@ import type {Meta, StoryObj} from '@storybook/react';
 import {ThemeSwitcher} from "./ThemeSwitcher";
 
 const meta = {
-    title: 'pages/ThemeSwitcher',
+    title: 'shared/ThemeSwitcher',
     component: ThemeSwitcher,
     tags: ['autodocs'],
 

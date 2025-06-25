@@ -1,5 +1,5 @@
 import {ProjectsList} from "./ui/ProjectsList/ProjectsList"
 import {ProjectItem} from "./ui/ProjectItem/ProjectItem"
-import {ProjectsData} from './module/projects'
+import {projectCard} from 'entities/Projects/mocks/projectsCard'
 
-export {ProjectsList, ProjectItem, ProjectsData}
+export {ProjectsList, ProjectItem, projectCard}

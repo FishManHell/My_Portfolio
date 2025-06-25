@@ -1,9 +1,10 @@
 import cls from "./ProjectsList.module.scss"
 import classNames from "classnames";
 import {SectionHeader} from "shared/ui/SectionHeader";
-import {Project, ProjectItem} from "../ProjectItem/ProjectItem";
+import {ProjectItem} from "../ProjectItem/ProjectItem";
 import {useMemo} from "react";
-import {ProjectsData} from "entities/Projects";
+import {projectList} from "entities/Projects/mocks/projectList";
+import {Project} from "../../module/types/project";
 
 interface ProjectsListProps {
     className?: string;
@@ -13,7 +14,7 @@ interface ProjectsListProps {
 export const ProjectsList = (props: ProjectsListProps) => {
     const {className, projects} = props;
 
-    const projectsList = projects || ProjectsData
+    const projectsList = projects || projectList
 
     const printProjectItems = useMemo(() => {
         return projectsList?.map(project => <ProjectItem project={project} key={project.id}/>)

@@ -2,7 +2,7 @@ import type {Meta, StoryObj} from '@storybook/react';
 import {TechStack} from "./TechStack";
 
 const meta = {
-    title: 'pages/TechStack',
+    title: 'widgets/TechStack',
     component: TechStack,
     tags: ['autodocs'],
 

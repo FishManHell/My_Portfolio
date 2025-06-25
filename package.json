@@ -1,6 +1,6 @@
 {
   "name": "My_Portfolio",
-  "version": "1.0.04",
+  "version": "1.0.05",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "build:dev": "webpack --env mode=development",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook",
+    "storybook:build": "storybook build -c ./config/storybook",
     "preview": "serve -s build"
   },
   "devDependencies": {

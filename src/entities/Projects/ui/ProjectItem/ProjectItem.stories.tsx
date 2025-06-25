@@ -1,8 +1,9 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import {ProjectItem} from "./ProjectItem";
+import {projectCard} from "entities/Projects";
 
 const meta = {
-    title: 'pages/ProjectItem',
+    title: 'entities/ProjectItem',
     component: ProjectItem,
     tags: ['autodocs'],
 
@@ -11,4 +12,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {};
+export const Primary: Story = {
+    args: {
+        project: projectCard
+    }
+};

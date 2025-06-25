@@ -1,27 +1,13 @@
 import cls from "./ProjectItem.module.scss";
 import classNames from "classnames";
 import {Card} from "shared/ui/Card/Card";
-import {memo, FC, SVGProps} from "react";
+import {memo} from "react";
 import {Icon} from "shared/ui/Icon";
-
-interface PreviewLink {
-    icon: FC<SVGProps<SVGSVGElement>>
-    link: string;
-    text: string;
-}
-
-export interface Project {
-    id: string;
-    img: string;
-    title: string;
-    description: string;
-    techStackList: string[];
-    previewLinks: PreviewLink[];
-}
+import {Project} from "../../module/types/project";
 
 interface ProjectItemProps {
     className?: string;
-    project?: Project
+    project: Project
 }
 
 export const ProjectItem = memo((props: ProjectItemProps) => {
@@ -56,10 +42,6 @@ export const ProjectItem = memo((props: ProjectItemProps) => {
                         <Icon Svg={previewLink.icon}/>
                         {previewLink.text}
                     </a>
-                    // <div className={cls["project-item-footer-preview-link"]} key={previewLink.text}>
-                    //     <Icon Svg={previewLink.icon}/>
-                    //     <a href={previewLink.link}>{previewLink.text}</a>
-                    // </div>
                 ))}
             </footer>
         </Card>

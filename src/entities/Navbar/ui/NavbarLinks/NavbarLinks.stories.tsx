@@ -2,7 +2,7 @@ import type {Meta, StoryObj} from '@storybook/react';
 import {NavbarLinks} from "./NavbarLinks";
 
 const meta = {
-    title: 'pages/NavbarLinks',
+    title: 'entities/NavbarLinks',
     component: NavbarLinks,
     tags: ['autodocs'],
 
