@@ -6,7 +6,7 @@ interface IntroductionProps {
 }
 
 export const Introduction = (props: IntroductionProps) => {
-    const {className} = props
+    const {className} = props;
 
     return (
         <div className={classNames(cls["introduction"], className)}>

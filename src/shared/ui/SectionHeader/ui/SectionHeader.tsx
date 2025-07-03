@@ -10,7 +10,6 @@ interface SectionHeaderProps {
 export const SectionHeader = (props: SectionHeaderProps) => {
     const {className, subtitle, title} = props;
 
-
     return (
         <div className={classNames(cls["section-header"], className)}>
             {title && <h1 className={cls["section-header__title"]}>{title}</h1>}
