@@ -7,8 +7,8 @@ export const projectCard: Project = {
     img: "https://9to5mac.com/wp-content/uploads/sites/6/2023/04/Apple-Weather-app.jpg?quality=82&strip=all",
     title: "Weather application",
     description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    techStackList: ["HTML", "JavaScript", "SASS", "React"],
-    previewLinks: [
+    tech_stack: ["HTML", "JavaScript", "SASS", "React"],
+    links: [
         {
             icon: LinkChainIcon,
             link: 'https://github.com/FishManHell',

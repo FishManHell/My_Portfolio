@@ -1,7 +1,9 @@
 import cls from "./AboutPage.module.scss"
 import classNames from "classnames"
 import {SectionHeader} from "shared/ui/SectionHeader";
-import {TimelineCard, educationList, experienceList} from "shared/ui/TimelineCard";
+import {TimelineCard} from "shared/ui/TimelineCard";
+import {useMultiFetch} from "shared/libs/hooks/useMultiFetch";
+import {TimeLineCard} from "shared/ui/TimelineCard/module/types/timeLineCardTypes";
 
 interface AboutPageProps {
     className?: string;
@@ -9,6 +11,10 @@ interface AboutPageProps {
 
 const AboutPage = (props: AboutPageProps) => {
     const {className} = props;
+    const {results, loading, error} = useMultiFetch<[TimeLineCard[], TimeLineCard[]]>([
+        {method: "get", url: "/works"},
+        {method: "get", url: "/educations"}
+    ])
 
     return (
         <div className={classNames(cls["about-page"], {}, [className])}>
@@ -23,15 +29,11 @@ const AboutPage = (props: AboutPageProps) => {
 
             <section className={cls["about-page-experience"]}>
             <header className={cls["about-page-experience-header"]}><h2>Work Experience</h2></header>
-                {experienceList.map(item => (
-                    <TimelineCard timelineCard={item} key={item.id}/>
-                ))}
+                {results?.[0] && results[0].map(item => <TimelineCard timelineCard={item} key={item.id}/>)}
             </section>
             <section className={cls["about-page-education"]}>
                 <header className={cls["about-page-education-header"]}><h2>Education</h2></header>
-                {educationList.map(item => (
-                    <TimelineCard timelineCard={item} key={item.id}/>
-                ))}
+                {results?.[1].map(item => <TimelineCard timelineCard={item} key={item.id}/>)}
             </section>
         </div>
     );

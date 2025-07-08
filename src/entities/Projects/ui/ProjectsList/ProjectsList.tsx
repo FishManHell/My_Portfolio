@@ -3,7 +3,6 @@ import classNames from "classnames";
 import {SectionHeader} from "shared/ui/SectionHeader";
 import {ProjectItem} from "../ProjectItem/ProjectItem";
 import {useMemo} from "react";
-import {projectList} from "entities/Projects/mocks/projectList";
 import {Project} from "../../module/types/project";
 
 interface ProjectsListProps {
@@ -14,11 +13,9 @@ interface ProjectsListProps {
 export const ProjectsList = (props: ProjectsListProps) => {
     const {className, projects} = props;
 
-    const projectsList = projects || projectList
-
     const printProjectItems = useMemo(() => {
-        return projectsList?.map(project => <ProjectItem project={project} key={project.id}/>)
-    }, [projects])
+        return projects?.map(project => <ProjectItem project={project} key={project.id}/>)
+    }, [projects]);
 
     return (
         <section className={classNames(cls["projects-list"], className)}>

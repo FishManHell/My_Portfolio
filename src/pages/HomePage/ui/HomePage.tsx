@@ -4,7 +4,9 @@ import {Introduction} from "shared/ui/Introduction/Introduction";
 import {ProjectsList as Projects} from "entities/Projects";
 import {TechStack} from "widgets/TechStack";
 import {Footer} from "widgets/Footer";
-import {useEffect} from "react";
+import {useMultiFetch} from "shared/libs/hooks/useMultiFetch";
+import {TechStackItem} from "widgets/TechStack";
+import {Project} from "entities/Projects";
 
 interface HomePageProps {
     className?: string;
@@ -12,29 +14,17 @@ interface HomePageProps {
 
 const HomePage = (props: HomePageProps) => {
     const {className} = props;
-
-    const fetchData = async () => {
-        try {
-            const response = await fetch('http://localhost:8000/posts/1', {
-                method: 'GET',
-            })
-            const data = await response.json()
-            console.log(data)
-        } catch (error) {
-            console.log('Errror')
-        }
-    }
-
-    useEffect(() => {
-        fetchData()
-    }, []);
+    const {results, loading, error} = useMultiFetch<[TechStackItem[], Project[]]>([
+        {method: 'get', url: '/tech_stacks'},
+        {method: 'get', url: '/projects'}
+    ])
 
 
     return (
         <div className={classNames(cls["home"], className)}>
             <Introduction/>
-            <TechStack/>
-            <Projects/>
+            <TechStack techStackList={results?.[0]}/>
+            <Projects projects={results?.[1]}/>
             <Footer/>
         </div>
     );

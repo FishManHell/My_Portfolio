@@ -1,43 +1,17 @@
 import classNames from "classnames";
 import cls from "./TechStack.module.scss"
-import {FC, SVGProps} from "react";
 import {SectionHeader} from "shared/ui/SectionHeader";
 import {Icon} from "shared/ui/Icon";
-import HtmlIcon from "shared/assets/icons/Html.svg";
-import CssIcon from "shared/assets/icons/Css.svg";
-import SassIcon from "shared/assets/icons/Sass.svg";
-import JSIcon from "shared/assets/icons/JS.svg";
-import TSIcon from "shared/assets/icons/Typescript.svg";
-import ReactIcon from "shared/assets/icons/React.svg";
-import ReduxIcon from "shared/assets/icons/Redux.svg";
-import GitIcon from "shared/assets/icons/Git.svg";
-import GitHubIcon from "shared/assets/icons/GitHub.svg";
-import WebstormIcon from "shared/assets/icons/Webstorm.svg";
-
-type TechStackItemType = FC<SVGProps<SVGSVGElement>>
-
-const iconsList: TechStackItemType[] = [
-    HtmlIcon,
-    CssIcon,
-    SassIcon,
-    JSIcon,
-    TSIcon,
-    ReactIcon,
-    ReduxIcon,
-    GitIcon,
-    GitHubIcon,
-    WebstormIcon
-]
+import {techStacksIconCollection} from "../model/mock/tech_stacks";
+import {TechStackItem} from "../model/types/types";
 
 interface TechStackProps {
     className?: string;
-    techStackList?: TechStackItemType[];
+    techStackList?: TechStackItem[];
 }
 
 export const TechStack = (props: TechStackProps) => {
     const {className, techStackList} = props;
-
-    const icons = techStackList || iconsList
 
     return (
         <div className={classNames(cls["tech-stack"], {}, [className])}>
@@ -46,13 +20,17 @@ export const TechStack = (props: TechStackProps) => {
                 subtitle={"Technologies I’ve been working with recently"}
             />
             <div className={cls["tech-stack-icons-container"]}>
-                {icons?.map((icon, index) => (
-                    <Icon
-                        Svg={icon}
-                        className={cls['tech-stack-icons-container-icon']}
-                        key={index}
-                    />
-                ))}
+                {techStackList?.map(({icon_key, id}) => {
+                    if (techStacksIconCollection[icon_key]) {
+                        return (
+                            <Icon
+                                Svg={techStacksIconCollection[icon_key]}
+                                className={cls['tech-stack-icons-container-icon']}
+                                key={id}
+                            />
+                        )
+                    }
+                })}
             </div>
         </div>
     );

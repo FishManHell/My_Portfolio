@@ -1,4 +1,6 @@
-import {FC, SVGProps} from "react";
+import {metaIconCollection} from "../../mocks/meta";
+
+export type MetaIconKey = keyof typeof metaIconCollection;
 
 export enum TimelineMetaLabel {
     'COMPANY' = 'company',
@@ -7,7 +9,7 @@ export enum TimelineMetaLabel {
 }
 
 export interface TimelineCardMeta {
-    icon: FC<SVGProps<SVGSVGElement>>
+    icon: MetaIconKey
     text: string
     label: TimelineMetaLabel
     date?: {

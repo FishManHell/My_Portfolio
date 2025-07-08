@@ -10,4 +10,26 @@ export default defineConfig([
   { files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"], languageOptions: { globals: globals.browser } },
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  {
+    files: ["**/*.{js,ts,jsx,tsx}"],
+    languageOptions: {
+      globals:  globals.browser,
+    },
+    plugins: {
+      react: pluginReact,
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+    rules: {
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react/react-in-jsx-scope": "off",
+      'react/display-name': 'warn',
+      "@typescript-eslint/no-unused-vars": ["warn", {
+        argsIgnorePattern: "^_|^ignored|^unused|^__",
+      }]
+    }
+  }
 ]);

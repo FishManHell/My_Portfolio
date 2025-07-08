@@ -4,6 +4,7 @@ import {Card} from "shared/ui/Card/Card";
 import {memo} from "react";
 import {Icon} from "shared/ui/Icon";
 import {Project} from "../../module/types/project";
+import {projectPreviewIconCollection} from "shared/mocks/project_previews";
 
 interface ProjectItemProps {
     className?: string;
@@ -31,18 +32,22 @@ export const ProjectItem = memo((props: ProjectItemProps) => {
                     >
                         Tech stack:
                         <span className={cls["project-item-content-footer-tech-stack-item"]}>
-                            {project?.techStackList.join(', ')}
+                            {project?.tech_stack.join(', ')}
                         </span>
                     </p>
                 </footer>
             </article>
             <footer className={cls["project-item-footer"]}>
-                {project?.previewLinks.map(previewLink => (
-                    <a href={previewLink.link} className={cls["project-item-footer-preview-link"]} key={previewLink.text}>
-                        <Icon Svg={previewLink.icon}/>
-                        {previewLink.text}
-                    </a>
-                ))}
+                {project.links.map(item => {
+                    if (projectPreviewIconCollection[item.icon]) {
+                        return (
+                            <a href={item.link} className={cls["project-item-footer-preview-link"]} key={item.text}>
+                                <Icon Svg={projectPreviewIconCollection[item.icon]}/>
+                                {item.text}
+                            </a>
+                        )
+                    }
+                })}
             </footer>
         </Card>
     );

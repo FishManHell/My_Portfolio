@@ -2,15 +2,18 @@ import {TimelineCardMeta, TimelineMetaLabel} from "../module/types/timeLineCardT
 import cls from "../ui/TimelineCard.module.scss";
 import {Icon} from "shared/ui/Icon";
 import {memo} from "react";
+import {metaIconCollection} from "shared/ui/TimelineCard";
 
 export const MetaCard = memo((props: TimelineCardMeta) => {
     const {icon, text, label, date} = props;
 
-    const isDate = label === TimelineMetaLabel.DATE && !!date
+    const isDate = label === TimelineMetaLabel.DATE && !!date;
+
+    const metaIcon = metaIconCollection[icon];
 
     const DateContent = (
         <p className={cls["timeline-card-meta-duration"]}>
-            <Icon Svg={icon}/>
+            {metaIcon && <Icon Svg={metaIcon}/>}
             <time dateTime={date?.from} className={cls["timeline-card-meta-duration-from"]}>
                 {date?.from}
             </time>
@@ -25,7 +28,7 @@ export const MetaCard = memo((props: TimelineCardMeta) => {
 
     return (
         <p className={cls[`timeline-card-meta-${label}`]}>
-            <Icon Svg={icon}/>
+            {metaIcon && <Icon Svg={metaIcon}/>}
             {text}
         </p>
     );

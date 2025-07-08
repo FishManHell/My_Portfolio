@@ -1,5 +1,4 @@
 import {TimelineCard} from "./ui/TimelineCard"
-import {educationList} from 'shared/ui/TimelineCard/mocks/educationList'
-import {experienceList} from "shared/ui/TimelineCard/mocks/experienceList"
+import {metaIconCollection} from './mocks/meta'
 
-export {TimelineCard, educationList, experienceList}
+export {TimelineCard, metaIconCollection}

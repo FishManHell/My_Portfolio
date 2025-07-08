@@ -1,7 +1,9 @@
-import {FC, SVGProps} from "react";
+import {projectPreviewIconCollection} from "shared/mocks/project_previews";
+
+export type PreviewIconKey = keyof typeof projectPreviewIconCollection;
 
 interface PreviewLink {
-    icon: FC<SVGProps<SVGSVGElement>>
+    icon: PreviewIconKey
     link: string;
     text: string;
 }
@@ -11,6 +13,6 @@ export interface Project {
     img: string;
     title: string;
     description: string;
-    techStackList: string[];
-    previewLinks: PreviewLink[];
+    tech_stack: string[];
+    links: PreviewLink[];
 }

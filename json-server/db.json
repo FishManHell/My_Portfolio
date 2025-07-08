@@ -1,13 +1,334 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+  "tech_stacks": [
+    {
+      "id": "1",
+      "icon_key": "html"
+    },
+    {
+      "id": "2",
+      "icon_key": "css"
+    },
+    {
+      "id": "3",
+      "icon_key": "sass"
+    },
+    {
+      "id": "4",
+      "icon_key": "javascript"
+    },
+    {
+      "id": "5",
+      "icon_key": "typescript"
+    },
+    {
+      "id": "6",
+      "icon_key": "react"
+    },
+    {
+      "id": "7",
+      "icon_key": "redux"
+    },
+    {
+      "id": "8",
+      "icon_key": "git"
+    },
+    {
+      "id": "9",
+      "icon_key": "github"
+    },
+    {
+      "id": "10",
+      "icon_key": "webstorm"
+    }
   ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+
+  "projects": [
+    {
+      "id": "1",
+      "img": "https://9to5mac.com/wp-content/uploads/sites/6/2023/04/Apple-Weather-app.jpg?quality=82&strip=all",
+      "title": "Weather application",
+      "description": "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+      "tech_stack": ["HTML", "JavaScript", "SASS", "React"],
+      "links": [
+        {
+          "icon": "link_chain",
+          "text": "Live Preview",
+          "link": "https://github.com/FishManHell"
+        },
+        {
+          "icon": "github",
+          "text": "View Code",
+          "link": "https://github.com/FishManHell"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "img": "https://9to5mac.com/wp-content/uploads/sites/6/2023/04/Apple-Weather-app.jpg?quality=82&strip=all",
+      "title": "Weather application",
+      "description": "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+      "tech_stack": ["HTML", "JavaScript", "SASS", "React"],
+      "links": [
+        {
+          "icon": "link_chain",
+          "text": "Live Preview",
+          "link": "https://github.com/FishManHell"
+        },
+        {
+          "icon": "github",
+          "text": "View Code",
+          "link": "https://github.com/FishManHell"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "img": "https://9to5mac.com/wp-content/uploads/sites/6/2023/04/Apple-Weather-app.jpg?quality=82&strip=all",
+      "title": "Weather application",
+      "description": "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+      "tech_stack": ["HTML", "JavaScript", "SASS", "React"],
+      "links": [
+        {
+          "icon": "link_chain",
+          "text": "Live Preview",
+          "link": "https://github.com/FishManHell"
+        },
+        {
+          "icon": "github",
+          "text": "View Code",
+          "link": "https://github.com/FishManHell"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "img": "https://9to5mac.com/wp-content/uploads/sites/6/2023/04/Apple-Weather-app.jpg?quality=82&strip=all",
+      "title": "Weather application",
+      "description": "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+      "tech_stack": ["HTML", "JavaScript", "SASS", "React"],
+      "links": [
+        {
+          "icon": "link_chain",
+          "text": "Live Preview",
+          "link": "https://github.com/FishManHell"
+        },
+        {
+          "icon": "github",
+          "text": "View Code",
+          "link": "https://github.com/FishManHell"
+        }
+      ]
+    }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+
+  "works": [
+    {
+      "id": "1",
+      "title": "Junior Web Developer",
+      "type": "Full Time",
+      "meta": [
+        {
+          "icon": "office_build",
+          "text": "Dr. Rajkumar’s Learning App",
+          "label": "company"
+        },
+        {
+          "icon": "location_marker",
+          "text": "Bengaluru",
+          "label": "location"
+        },
+        {
+          "icon": "calendar",
+          "text": "Sep 2021 - Dec 2021",
+          "label": "date",
+          "date": {"from": "2021-09", "to": "2021-12"}
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Junior Web Developer",
+      "type": "Full Time",
+      "meta": [
+        {
+          "icon": "office_build",
+          "text": "Dr. Rajkumar’s Learning App",
+          "label": "company"
+        },
+        {
+          "icon": "location_marker",
+          "text": "Bengaluru",
+          "label": "location"
+        },
+        {
+          "icon": "calendar",
+          "text": "Sep 2021 - Dec 2021",
+          "label": "date",
+          "date": {"from": "2021-09", "to": "2021-12"}
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Junior Web Developer",
+      "type": "Full Time",
+      "meta": [
+        {
+          "icon": "office_build",
+          "text": "Dr. Rajkumar’s Learning App",
+          "label": "company"
+        },
+        {
+          "icon": "location_marker",
+          "text": "Bengaluru",
+          "label": "location"
+        },
+        {
+          "icon": "calendar",
+          "text": "Sep 2021 - Dec 2021",
+          "label": "date",
+          "date": {"from": "2021-09", "to": "2021-12"}
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Junior Web Developer",
+      "type": "Full Time",
+      "meta": [
+        {
+          "icon": "office_build",
+          "text": "Dr. Rajkumar’s Learning App",
+          "label": "company"
+        },
+        {
+          "icon": "location_marker",
+          "text": "Bengaluru",
+          "label": "location"
+        },
+        {
+          "icon": "calendar",
+          "text": "Sep 2021 - Dec 2021",
+          "label": "date",
+          "date": {"from": "2021-09", "to": "2021-12"}
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Junior Web Developer",
+      "type": "Full Time",
+      "meta": [
+        {
+          "icon": "office_build",
+          "text": "Dr. Rajkumar’s Learning App",
+          "label": "company"
+        },
+        {
+          "icon": "location_marker",
+          "text": "Bengaluru",
+          "label": "location"
+        },
+        {
+          "icon": "calendar",
+          "text": "Sep 2021 - Dec 2021",
+          "label": "date",
+          "date": {"from": "2021-09", "to": "2021-12"}
+        }
+      ]
+    }
+  ],
+
+  "educations": [
+    {
+      "id": "1",
+      "title": "Bachelor in Electronics & Communication",
+      "type": "Full Time",
+      "meta": [
+        {
+          "icon": "office_build",
+          "text": "Bangalore Instutute of Technology",
+          "label": "company"
+        },
+        {
+          "icon": "calendar",
+          "text": "Aug 2015 - Dec 2020",
+          "label": "date",
+          "date": {"from": "2021-08", "to": "2021-12"}
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Bachelor in Electronics & Communication",
+      "type": "Full Time",
+      "meta": [
+        {
+          "icon": "office_build",
+          "text": "Bangalore Instutute of Technology",
+          "label": "company"
+        },
+        {
+          "icon": "calendar",
+          "text": "Aug 2015 - Dec 2020",
+          "label": "date",
+          "date": {"from": "2021-08", "to": "2021-12"}
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Bachelor in Electronics & Communication",
+      "type": "Full Time",
+      "meta": [
+        {
+          "icon": "office_build",
+          "text": "Bangalore Instutute of Technology",
+          "label": "company"
+        },
+        {
+          "icon": "calendar",
+          "text": "Aug 2015 - Dec 2020",
+          "label": "date",
+          "date": {"from": "2021-08", "to": "2021-12"}
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Bachelor in Electronics & Communication",
+      "type": "Full Time",
+      "meta": [
+        {
+          "icon": "office_build",
+          "text": "Bangalore Instutute of Technology",
+          "label": "company"
+        },
+        {
+          "icon": "calendar",
+          "text": "Aug 2015 - Dec 2020",
+          "label": "date",
+          "date": {"from": "2021-08", "to": "2021-12"}
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Bachelor in Electronics & Communication",
+      "type": "Full Time",
+      "meta": [
+        {
+          "icon": "office_build",
+          "text": "Bangalore Instutute of Technology",
+          "label": "company"
+        },
+        {
+          "icon": "calendar",
+          "text": "Aug 2015 - Dec 2020",
+          "label": "date",
+          "date": {"from": "2021-08", "to": "2021-12"}
+        }
+      ]
+    }
+  ]
 }
