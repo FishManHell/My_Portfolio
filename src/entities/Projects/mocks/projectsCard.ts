@@ -1,6 +1,4 @@
 import {Project} from "../module/types/project";
-import LinkChainIcon from "shared/assets/icons/LinkChain.svg";
-import GitHubIcon from "shared/assets/icons/GitHub.svg";
 
 export const projectCard: Project = {
     id: "1",
@@ -10,12 +8,12 @@ export const projectCard: Project = {
     tech_stack: ["HTML", "JavaScript", "SASS", "React"],
     links: [
         {
-            icon: LinkChainIcon,
+            icon: 'link_chain',
             link: 'https://github.com/FishManHell',
             text: 'Live Preview'
         },
         {
-            icon: GitHubIcon,
+            icon: 'github',
             link: 'https://github.com/FishManHell',
             text: 'View Code'
         }

@@ -1,19 +1,22 @@
 import cls from "./ProjectsPage.module.scss"
 import classNames from "classnames";
-import {ProjectsList} from "entities/Projects";
+import {Project, ProjectsList} from "entities/Projects";
 import {useFetch} from "shared/libs/hooks/useFetch";
 
 interface ProjectsPageProps {
     className?: string;
+    mockProjects?: Project[];
 }
 
 const ProjectsPage = (props: ProjectsPageProps) => {
-    const {className} = props;
-    const {data: projects, loading, error} = useFetch({method: "get", endpoint: "/projects"});
+    const {className, mockProjects} = props;
+    const {data: projects, loading, error} = useFetch<Project[]>({method: "get", endpoint: "/projects"});
+
+    const result = mockProjects ?? projects;
 
     return (
         <div className={classNames(cls["projects-page"], className)}>
-            <ProjectsList projects={projects} className={cls["projects-page-list"]}/>
+            <ProjectsList projects={result} className={cls["projects-page-list"]}/>
         </div>
     );
 };

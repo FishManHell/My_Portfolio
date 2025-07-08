@@ -1,6 +1,6 @@
 {
   "name": "My_Portfolio",
-  "version": "1.0.07",
+  "version": "1.0.08",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -43,6 +43,7 @@
     "css-loader": "^7.1.2",
     "eslint": "^9.29.0",
     "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^6.0.0-rc.1",
     "globals": "^16.2.0",
     "html-webpack-plugin": "^5.6.3",
     "jest": "^30.0.0",

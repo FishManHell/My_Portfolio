@@ -10,21 +10,23 @@ import {Project} from "entities/Projects";
 
 interface HomePageProps {
     className?: string;
+    mockResults?: [TechStackItem[], Project[]]; // only for storybook
 }
 
 const HomePage = (props: HomePageProps) => {
-    const {className} = props;
+    const {className, mockResults} = props;
     const {results, loading, error} = useMultiFetch<[TechStackItem[], Project[]]>([
         {method: 'get', url: '/tech_stacks'},
         {method: 'get', url: '/projects'}
     ])
 
+    const finalResults = mockResults ?? results;
 
     return (
         <div className={classNames(cls["home"], className)}>
             <Introduction/>
-            <TechStack techStackList={results?.[0]}/>
-            <Projects projects={results?.[1]}/>
+            <TechStack techStackList={finalResults?.[0]}/>
+            <Projects projects={finalResults?.[1]}/>
             <Footer/>
         </div>
     );

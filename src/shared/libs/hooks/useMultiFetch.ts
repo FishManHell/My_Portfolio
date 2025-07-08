@@ -1,6 +1,7 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {AxiosError} from "axios";
 import {callApi, HttpMethod} from "shared/api/callApi";
+import {useInitialEffect} from "shared/libs/hooks/useInitialEffect";
 
 interface RequestItem<T> {
     method: HttpMethod;
@@ -35,9 +36,9 @@ export const useMultiFetch = <T extends any[]>(requests: RequestsType<T>) => {
         }
     }
 
-    useEffect(() => {
+    useInitialEffect(() => {
         fetchAll()
-    }, []);
+    });
 
     return {loading, error, results};
 }

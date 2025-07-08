@@ -1,6 +1,7 @@
-import {useCallback, useEffect, useState} from "react";
+import {useCallback, useState} from "react";
 import {AxiosError} from "axios";
 import {callApi, HttpMethod} from "shared/api/callApi";
+import {useInitialEffect} from "shared/libs/hooks/useInitialEffect";
 
 interface UseFetchProps {
     method: HttpMethod;
@@ -9,7 +10,7 @@ interface UseFetchProps {
 }
 
 export const useFetch = <T = any> ({method, endpoint, payload}: UseFetchProps) => {
-    const [data, setData] = useState<T | null>(null);
+    const [data, setData] = useState<T | undefined>(undefined);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<AxiosError | null>(null);
 
@@ -27,9 +28,9 @@ export const useFetch = <T = any> ({method, endpoint, payload}: UseFetchProps) =
         }
     }, [method, endpoint, payload]);
 
-    useEffect(() => {
+    useInitialEffect(() => {
         fetch()
-    }, []);
+    });
 
     return {data, loading, error};
 }

@@ -4,7 +4,7 @@ import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import {WebpackPluginInstance, HotModuleReplacementPlugin, ProgressPlugin, DefinePlugin} from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-export const buildPlugins = ({isDev, apiUrl, paths: {html: template}}: BuildOptions): WebpackPluginInstance[] => {
+export const buildPlugins = ({isDev, apiUrl, project, paths: {html: template}}: BuildOptions): WebpackPluginInstance[] => {
 
     const devPlugins = [
         new ReactRefreshWebpackPlugin({
@@ -22,7 +22,8 @@ export const buildPlugins = ({isDev, apiUrl, paths: {html: template}}: BuildOpti
         }),
         new DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
-            __API_URL__: JSON.stringify(apiUrl)
+            __API_URL__: JSON.stringify(apiUrl),
+            __PROJECT__: JSON.stringify(project)
         }),
     ]
 

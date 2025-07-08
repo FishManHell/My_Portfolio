@@ -7,14 +7,17 @@ import {TimeLineCard} from "shared/ui/TimelineCard/module/types/timeLineCardType
 
 interface AboutPageProps {
     className?: string;
+    mockResults?: [TimeLineCard[], TimeLineCard[]] // just for storybook
 }
 
 const AboutPage = (props: AboutPageProps) => {
-    const {className} = props;
+    const {className, mockResults} = props;
     const {results, loading, error} = useMultiFetch<[TimeLineCard[], TimeLineCard[]]>([
         {method: "get", url: "/works"},
         {method: "get", url: "/educations"}
     ])
+
+    const finalResults = mockResults ?? results;
 
     return (
         <div className={classNames(cls["about-page"], {}, [className])}>
@@ -28,12 +31,14 @@ const AboutPage = (props: AboutPageProps) => {
             />
 
             <section className={cls["about-page-experience"]}>
-            <header className={cls["about-page-experience-header"]}><h2>Work Experience</h2></header>
-                {results?.[0] && results[0].map(item => <TimelineCard timelineCard={item} key={item.id}/>)}
+            <header className={cls["about-page-experience-header"]}>
+                <h2>Work Experience</h2>
+            </header>
+                {finalResults?.[0].map(item => <TimelineCard timelineCard={item} key={item.id}/>)}
             </section>
             <section className={cls["about-page-education"]}>
                 <header className={cls["about-page-education-header"]}><h2>Education</h2></header>
-                {results?.[1].map(item => <TimelineCard timelineCard={item} key={item.id}/>)}
+                {finalResults?.[1].map(item => <TimelineCard timelineCard={item} key={item.id}/>)}
             </section>
         </div>
     );

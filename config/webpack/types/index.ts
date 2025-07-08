@@ -19,4 +19,5 @@ export interface BuildOptions {
     apiUrl: string;
     isDev: boolean;
     port: number;
+    project: string
 }
