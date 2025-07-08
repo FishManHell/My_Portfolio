@@ -4,7 +4,7 @@ import {Card} from "shared/ui/Card/Card";
 import {memo} from "react";
 import {Icon} from "shared/ui/Icon";
 import {Project} from "../../module/types/project";
-import {projectPreviewIconCollection} from "shared/mocks/project_previews";
+import {projectPreviewIconCollection} from "../../mocks/project_previews";
 
 interface ProjectItemProps {
     className?: string;
