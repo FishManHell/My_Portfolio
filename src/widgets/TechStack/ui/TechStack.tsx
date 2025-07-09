@@ -25,7 +25,7 @@ export const TechStack = (props: TechStackProps) => {
                         return (
                             <Icon
                                 Svg={techStacksIconCollection[icon_key]}
-                                className={cls['tech-stack-icons-container-icon']}
+                                className={classNames(cls['tech-stack-icons-container-icon'], cls[icon_key])}
                                 key={id}
                             />
                         )

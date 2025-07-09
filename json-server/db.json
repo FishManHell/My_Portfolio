@@ -124,116 +124,70 @@
   "works": [
     {
       "id": "1",
-      "title": "Junior Web Developer",
+      "title": "Frontend Web Developer",
       "type": "Full Time",
       "meta": [
         {
           "icon": "office_build",
-          "text": "Dr. Rajkumar’s Learning App",
+          "text": "IntellAct",
           "label": "company"
         },
         {
           "icon": "location_marker",
-          "text": "Bengaluru",
+          "text": "Modi'in",
           "label": "location"
         },
         {
           "icon": "calendar",
-          "text": "Sep 2021 - Dec 2021",
+          "text": "Mar 2022 - Apr 2025",
           "label": "date",
-          "date": {"from": "2021-09", "to": "2021-12"}
+          "date": {"from": "2022-03", "to": "2025-04"}
         }
       ]
     },
     {
       "id": "2",
-      "title": "Junior Web Developer",
+      "title": "Frontend Web Developer",
       "type": "Full Time",
       "meta": [
         {
           "icon": "office_build",
-          "text": "Dr. Rajkumar’s Learning App",
+          "text": "Elipsor/LTD",
           "label": "company"
         },
         {
           "icon": "location_marker",
-          "text": "Bengaluru",
+          "text": "Rehovot",
           "label": "location"
         },
         {
           "icon": "calendar",
-          "text": "Sep 2021 - Dec 2021",
+          "text": "Jul 2020 - Feb 2022",
           "label": "date",
-          "date": {"from": "2021-09", "to": "2021-12"}
+          "date": {"from": "2020-07", "to": "2022-02"}
         }
       ]
     },
     {
       "id": "3",
-      "title": "Junior Web Developer",
+      "title": "Frontend Web Developer",
       "type": "Full Time",
       "meta": [
         {
           "icon": "office_build",
-          "text": "Dr. Rajkumar’s Learning App",
+          "text": "Vortex",
           "label": "company"
         },
         {
           "icon": "location_marker",
-          "text": "Bengaluru",
+          "text": "Dnipro",
           "label": "location"
         },
         {
           "icon": "calendar",
-          "text": "Sep 2021 - Dec 2021",
+          "text": "Jan 2018 - Sep 2019",
           "label": "date",
-          "date": {"from": "2021-09", "to": "2021-12"}
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "Junior Web Developer",
-      "type": "Full Time",
-      "meta": [
-        {
-          "icon": "office_build",
-          "text": "Dr. Rajkumar’s Learning App",
-          "label": "company"
-        },
-        {
-          "icon": "location_marker",
-          "text": "Bengaluru",
-          "label": "location"
-        },
-        {
-          "icon": "calendar",
-          "text": "Sep 2021 - Dec 2021",
-          "label": "date",
-          "date": {"from": "2021-09", "to": "2021-12"}
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "title": "Junior Web Developer",
-      "type": "Full Time",
-      "meta": [
-        {
-          "icon": "office_build",
-          "text": "Dr. Rajkumar’s Learning App",
-          "label": "company"
-        },
-        {
-          "icon": "location_marker",
-          "text": "Bengaluru",
-          "label": "location"
-        },
-        {
-          "icon": "calendar",
-          "text": "Sep 2021 - Dec 2021",
-          "label": "date",
-          "date": {"from": "2021-09", "to": "2021-12"}
+          "date": {"from": "2018-01", "to": "2019-09"}
         }
       ]
     }
@@ -242,91 +196,73 @@
   "educations": [
     {
       "id": "1",
-      "title": "Bachelor in Electronics & Communication",
-      "type": "Full Time",
+      "title": "Dnipro University of Technology",
+      "type": "Remote",
       "meta": [
         {
-          "icon": "office_build",
-          "text": "Bangalore Instutute of Technology",
+          "icon": "location_marker",
+          "text": "Dnipro",
           "label": "company"
         },
         {
           "icon": "calendar",
-          "text": "Aug 2015 - Dec 2020",
+          "text": "Sep 2023 - present day",
           "label": "date",
-          "date": {"from": "2021-08", "to": "2021-12"}
+          "date": {"from": "2023-09", "to": "present day"}
         }
       ]
     },
     {
       "id": "2",
-      "title": "Bachelor in Electronics & Communication",
-      "type": "Full Time",
+      "title": "Tel-Ran, Educational Center",
+      "type": "Online",
       "meta": [
         {
-          "icon": "office_build",
-          "text": "Bangalore Instutute of Technology",
+          "icon": "location_marker",
+          "text": "Rehovot",
           "label": "company"
         },
         {
           "icon": "calendar",
-          "text": "Aug 2015 - Dec 2020",
+          "text": "Oct 2020 - Apr 2021",
           "label": "date",
-          "date": {"from": "2021-08", "to": "2021-12"}
+          "date": {"from": "2020-10", "to": "2021-04"}
         }
       ]
     },
     {
       "id": "3",
-      "title": "Bachelor in Electronics & Communication",
-      "type": "Full Time",
+      "title": "Hillel (IT School)",
+      "type": "Hybrid",
       "meta": [
         {
-          "icon": "office_build",
-          "text": "Bangalore Instutute of Technology",
+          "icon": "location_marker",
+          "text": "Dnipro",
           "label": "company"
         },
         {
           "icon": "calendar",
-          "text": "Aug 2015 - Dec 2020",
+          "text": "Sep 2017 - Sep 2018",
           "label": "date",
-          "date": {"from": "2021-08", "to": "2021-12"}
+          "date": {"from": "2017-09", "to": "2018-09"}
         }
       ]
     },
     {
       "id": "4",
-      "title": "Bachelor in Electronics & Communication",
+      "title": "Dnipropetrovsk State College",
       "type": "Full Time",
       "meta": [
         {
-          "icon": "office_build",
-          "text": "Bangalore Instutute of Technology",
+          "icon": "location_marker",
+          "text": "Dnipro",
           "label": "company"
         },
         {
           "icon": "calendar",
-          "text": "Aug 2015 - Dec 2020",
+          "text": "Feb 2013 - Feb 2016",
           "label": "date",
-          "date": {"from": "2021-08", "to": "2021-12"}
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "title": "Bachelor in Electronics & Communication",
-      "type": "Full Time",
-      "meta": [
-        {
-          "icon": "office_build",
-          "text": "Bangalore Instutute of Technology",
-          "label": "company"
-        },
-        {
-          "icon": "calendar",
-          "text": "Aug 2015 - Dec 2020",
-          "label": "date",
-          "date": {"from": "2021-08", "to": "2021-12"}
+          "date": {"from": "2013-02", "to": "2016-02"}
         }
       ]
     }

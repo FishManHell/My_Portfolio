@@ -4,6 +4,6 @@ import CalendarIcon from "shared/assets/icons/Calendar.svg";
 
 export const metaIconCollection = {
     "office_build": OfficeBuildingIcon,
-    "calendar": LocationMarkIcon,
-    "location_marker": CalendarIcon
+    "calendar": CalendarIcon,
+    "location_marker": LocationMarkIcon
 } as const;

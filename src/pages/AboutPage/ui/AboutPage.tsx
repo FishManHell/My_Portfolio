@@ -19,14 +19,18 @@ const AboutPage = (props: AboutPageProps) => {
 
     const finalResults = mockResults ?? results;
 
+    const subtitle = `Experienced Front-End Developer with over 5+ years of
+                       expertise in creating dynamic, user-friendly web applications
+                       using JavaScript, TypeScript, React, and modern frameworks.
+                       Adept at optimizing user interfaces, collaborating with crossfunctional teams, and delivering high-quality solutions.
+                       Looking to contribute my skills and creativity to challenging
+                       projects`
+
     return (
         <div className={classNames(cls["about-page"], {}, [className])}>
             <SectionHeader
                 title={'About Me'}
-                subtitle={"The Generator App is an online tool that helps you to export ready-made templates ready to " +
-                    "work as your future website. It helps you to combine slides, panels and other components and export " +
-                    "it as a set of static files: HTML/CSS/JS."
-                }
+                subtitle={subtitle}
                 className={cls["about-page-header"]}
             />
 
