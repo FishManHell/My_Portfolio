@@ -1,10 +1,14 @@
 import cls from "./Navbar.module.scss";
 import classNames from "classnames";
-import {Icon} from "shared/ui/Icon";
-import LinkedInIcon from "shared/assets/icons/Linkedin.svg";
 import {NavbarLinks} from "entities/Navbar";
-import {ThemeSwitcher} from "shared/ui/ThemeSwitcher";
-import DownloadIcon from "shared/assets/icons/Download.svg";
+import {ResizeContainer} from "shared/ui/ResizeContainer/ui/ResizeContainer";
+import {HamburgerComponent} from "features/HamburgerComponent";
+import {NavbarActions} from "shared/ui/NavbarActions";
+
+const BODY_PADDING = 10
+const MIN_SIZE = 560
+
+const MIN_CONTENT_WIDTH = MIN_SIZE - BODY_PADDING * 2;
 
 interface NavbarProps {
     className?: string;
@@ -13,25 +17,19 @@ interface NavbarProps {
 export const Navbar = (props: NavbarProps) => {
     const {className} = props;
 
-    const linkedInLink = "https://www.linkedin.com/in/denys-zhyvotov-8683611b9/"
-
     return (
-        <header className={classNames(cls["navbar"], className)}>
-            <NavbarLinks className={cls["navbar-links-container"]}/>
-            <section className={cls["navbar-icon-links-container"]}>
-                <a
-                    download
-                    className={cls['navbar-icon-links-container-download-cv']}
-                    title={"Download CV"}
-                    href={'/cv/CV_Denys_Zhyvoto_Front-End Developer.pdf'}
-                >
-                    <DownloadIcon/>
-                </a>
-                <a href={linkedInLink} className={cls["navbar-icon-links-container-icon-link"]}>
-                    <Icon Svg={LinkedInIcon}/>
-                </a>
-            </section>
-            <ThemeSwitcher/>
-        </header>
+        <ResizeContainer
+            refreshMode={'throttle'}
+            refreshRate={450}
+            className={classNames(cls["navbar"], className)}
+            renderContent={(width) => {
+                if (width <= MIN_CONTENT_WIDTH) return <HamburgerComponent/>
+                return (
+                    <>
+                        <NavbarLinks/>
+                        <NavbarActions/>
+                    </>
+                )
+        }}/>
     );
 };

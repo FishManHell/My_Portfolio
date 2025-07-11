@@ -5,23 +5,3 @@
   align-items: center;
   justify-content: right;
 }
-
-.navbar-icon-links-container-icon-link,
-.navbar-icon-links-container-download-cv {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  svg {
-    width: inherit;
-    height: inherit;
-  }
-}
-
-.navbar-icon-links-container-download-cv {
-  cursor: pointer;
-
-  svg {
-    color: var(--invert-bg-color);
-  }
-}

@@ -2,7 +2,6 @@ import cls from "./Footer.module.scss"
 import classNames from "classnames";
 import {Icon} from "shared/ui/Icon";
 import LinkedInIcon from "shared/assets/icons/Linkedin.svg";
-import {NavbarLinks} from "entities/Navbar";
 
 const linkedInLink = "https://www.linkedin.com/in/denys-zhyvotov-8683611b9/";
 const email = "denyszhyvotov@gmail.com";
@@ -28,7 +27,6 @@ export const Footer = (props: FooterProps) => {
                     <Icon Svg={LinkedInIcon}/>
                 </a>
             </section>
-            <NavbarLinks className={cls['footer-links']} />
         </footer>
     );
 };

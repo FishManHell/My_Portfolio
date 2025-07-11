@@ -6,4 +6,18 @@
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
   }
+  
+  
+  @media screen and (max-width: 560px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    span {
+      font-size: var(--l-size);
+      color: var(--bg-color);
+    }
+  }
 }

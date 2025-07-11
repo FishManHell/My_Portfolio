@@ -25,7 +25,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 
     .footer-contacts-link {
       display: inline-block;
@@ -62,11 +62,5 @@
         fill: var(--invert-bg-footer-line-color);
       }
     }
-  }
-
-  .footer-links {
-    margin-top: 50px;
-    display: flex;
-    justify-content: flex-start;
   }
 }

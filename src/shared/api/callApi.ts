@@ -4,17 +4,16 @@ import {$api} from "./api";
 export type HttpMethod = 'get' | 'post' | 'put' | 'delete';
 
 /**
- * Универсальный вызов API с типизацией.
+ * Universal Api call type.
  *
- * @param method - HTTP метод (get, post, put, delete)
- * @param url - URL эндпоинта
- * @param payload - данные для post/put (или config для get/delete)
- * @returns Promise с типизированными данными
+ * @param method - HTTP method (get, post, put, delete)
+ * @param url - Url endpoint
+ * @param payload - Some data for POST/PUT or config for GET/DELETE
+ * @returns Promise with typing data
  */
 
 export const callApi = async <T = any>(
     method: HttpMethod, url: string, payload?: any
 ): Promise<AxiosResponse<T>> => {
-    console.log(method, "method", url, "url")
     return await $api[method](url, payload);
 };

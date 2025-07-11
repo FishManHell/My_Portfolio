@@ -1,0 +1,41 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modal-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: var(--invert-bg-color);
+    opacity: 0.95;
+  }
+}
+
+.modal-overlay-content {
+  z-index: 3;
+}
+
+.opened {
+  pointer-events: auto;
+  opacity: 1;
+}
