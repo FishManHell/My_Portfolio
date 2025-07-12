@@ -16,7 +16,7 @@ export const HamburgerComponent = () => {
             <Modal isOpen={isOpen} onClose={onClose} className={cls['burger-navbar']}>
                 <NavbarLinks className={cls["navbar-links-container"]}/>
             </Modal>
-            <NavbarActions/>
+            <NavbarActions isOpenBurgerMenu={isOpen}/>
             <BurgerMenu onToggle={onToggle} isOpen={isOpen}/>
         </>
     )

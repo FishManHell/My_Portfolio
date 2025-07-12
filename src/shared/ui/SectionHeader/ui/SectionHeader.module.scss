@@ -2,13 +2,24 @@
   text-align: center;
 
   &__title {
-    font-size: var(--title-size);
+    font-size: var(--xl-size);
     color: var(--title-color-text);
   }
 
   &__subtitle {
-    font-size: var(--subtitle-size);
+    font-size: var(--l-size);
     color: var(--txt-color);
     margin-top: 10px;
   }
+
+  @media screen and (max-width: 560px) {
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+  }
+
 }

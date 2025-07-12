@@ -62,5 +62,15 @@
         fill: var(--invert-bg-footer-line-color);
       }
     }
+
+    @media screen and (max-width: 560px) {
+      .email-link, .phone-link {
+        width: auto;
+      }
+
+      .footer-contacts-link {
+        margin-right: 10px;
+      }
+    }
   }
 }

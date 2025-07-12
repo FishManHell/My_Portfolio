@@ -39,17 +39,19 @@ export const Modal = (props: ModalProps) => {
     useEffect(() => {
         if (isOpen) {
             setMounted(true)
+            document.body.style.overflow = "hidden";
         }
 
         return () => {
             setMounted(false);
+            document.body.style.overflow = "auto"
         }
     }, [isOpen]);
 
     if (!isMounted) return null
 
     return (
-        <div className={classNames(cls['modal'], className, modes)}>
+        <div className={classNames(cls['modal'], className, modes)} onClick={closeHandler}>
             <div className={cls['modal-overlay']}>
                 <div className={cls['modal-overlay-content']} onClick={onContentClick}>
                     {children}

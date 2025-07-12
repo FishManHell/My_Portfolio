@@ -4,6 +4,8 @@
 
 .navbar-actions-icon-links-container-icon-link,
 .navbar-actions-icon-links-container-download-cv {
+  cursor: pointer;
+
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -11,17 +13,22 @@
   svg {
     width: inherit;
     height: inherit;
-  }
-
-  @media screen and (max-width: 560px) {
-
+    color: var(--invert-bg-color);
   }
 }
 
-.navbar-actions-icon-links-container-download-cv {
-  cursor: pointer;
+.burger-navbar-actions-opened {
+  position: relative;
+  z-index: 3;
 
   svg {
-    color: var(--invert-bg-color);
+    color: var(--bg-color)
+  }
+
+  .navbar-actions-theme-switcher,
+  .navbar-actions-icon-links-container-icon-link {
+    svg {
+      fill: var(--bg-color);
+    }
   }
 }
