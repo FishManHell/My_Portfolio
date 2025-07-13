@@ -6,7 +6,7 @@ import {ThemeSwitcher} from "shared/ui/ThemeSwitcher";
 import classNames from "classnames";
 
 const LINKEDIN_LINK = "https://www.linkedin.com/in/denys-zhyvotov-8683611b9/";
-const DOWNLOAD_LINK = '/cv/CV_Denys_Zhyvoto_Front-End Developer.pdf';
+const DOWNLOAD_LINK = '/cv/CV_Denys_Zhyvoto_Front-End%20Developer.pdf';
 
 interface NavbarActionsProps {
     className?: string;
