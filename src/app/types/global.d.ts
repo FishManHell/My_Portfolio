@@ -6,6 +6,11 @@ declare module '*.scss' {
     export = classNames;
 }
 
+declare module '*.pdf' {
+    const src: string;
+    export default src;
+}
+
 declare module '*.svg';
 declare module '*.jpg';
 declare module '*.jpeg';

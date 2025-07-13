@@ -3,10 +3,10 @@ import DownloadIcon from "shared/assets/icons/Download.svg";
 import {Icon} from "shared/ui/Icon";
 import LinkedInIcon from "shared/assets/icons/Linkedin.svg";
 import {ThemeSwitcher} from "shared/ui/ThemeSwitcher";
+import CV from "shared/assets/resource/CV-Denys-Zhyvotov-Front-End-Developer.pdf";
 import classNames from "classnames";
 
 const LINKEDIN_LINK = "https://www.linkedin.com/in/denys-zhyvotov-8683611b9/";
-const DOWNLOAD_LINK = '/cv/CV-Denys-Zhyvoto-Front-End-Developer.pdf';
 
 interface NavbarActionsProps {
     className?: string;
@@ -24,7 +24,7 @@ export const NavbarActions = ({className, isOpenBurgerMenu}: NavbarActionsProps)
             <section className={cls["navbar-actions-icon-links-container"]}>
                 <a
                     className={cls["navbar-actions-icon-links-container-download-cv"]}
-                    download title={"Download CV"} href={DOWNLOAD_LINK}
+                    download title={"Download CV"} href={CV}
                 >
                     <DownloadIcon/>
                 </a>
