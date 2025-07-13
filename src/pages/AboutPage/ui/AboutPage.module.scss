@@ -26,7 +26,41 @@
   margin: 50px 0;
 
   h2 {
-    font-size: var(--title-size);
+    font-size: var(--xl-size);
     color: var(--title-color-text);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .about-page-header {
+    width: 100%;
+  }
+
+  .about-page-experience-header,
+  .about-page-education-header {
+    margin: 30px 0;
+    h2 {
+      font-size: var(--l-size);
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .about-page-header {
+    h1 {
+      font-size: var(--l-size);
+    }
+
+    h2 {
+      font-size: var(1.25rem);
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .about-page-header {
+    h2 {
+      font-size: var(--m-size);
+    }
   }
 }

@@ -41,7 +41,9 @@ const AboutPage = (props: AboutPageProps) => {
                 {finalResults?.[0].map(item => <TimelineCard timelineCard={item} key={item.id}/>)}
             </section>
             <section className={cls["about-page-education"]}>
-                <header className={cls["about-page-education-header"]}><h2>Education</h2></header>
+                <header className={cls["about-page-education-header"]}>
+                    <h2>Education</h2>
+                </header>
                 {finalResults?.[1].map(item => <TimelineCard timelineCard={item} key={item.id}/>)}
             </section>
         </div>

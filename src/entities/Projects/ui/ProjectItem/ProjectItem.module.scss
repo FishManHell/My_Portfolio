@@ -2,11 +2,16 @@
   position: relative;
   width: 370px;
   height: 570px;
-  line-height: 1.625rem;
+  line-height: 1.5rem;
 
   &:hover {
-    transform: scale(1.05);
     transition: all 0.3s ease-in-out;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -92,5 +97,38 @@
       color: var(--invert-bg-color);
       fill: none;
     }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .project-item {
+    width: 320px;
+    height: 520px;
+  }
+
+  .project-item-header {
+    height: 200px;
+  }
+
+  .project-item-content {
+    margin-top: 220px;
+  }
+
+  .project-item-content-header {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .project-item-content-section {
+    font-size: 1rem;
+  }
+
+  .project-item-content-footer {
+    margin-top: 15px;
+  }
+
+  .project-item-footer {
+    margin-top: 25px;
   }
 }

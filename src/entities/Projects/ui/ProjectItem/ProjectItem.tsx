@@ -23,7 +23,7 @@ export const ProjectItem = memo((props: ProjectItemProps) => {
                 <header className={cls["project-item-content-header"]}>
                     <h3>{project?.title}</h3>
                 </header>
-                <section className={cls["project-item__content__section"]}>
+                <section className={cls["project-item-content-section"]}>
                     <p>{project?.description}</p>
                 </section>
                 <footer className={cls["project-item-content-footer"]}>

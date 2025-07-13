@@ -11,10 +11,10 @@ export const Introduction = (props: IntroductionProps) => {
     return (
         <div className={classNames(cls["introduction"], className)}>
             <h1 className={cls["introduction-title"]}>
-                Hi 👋,
-                My name is
-                <span >Denys Zhyvotov</span>,
-                I build things for web
+                Hi 👋 My name is
+                <span>Denys Zhyvotov</span>
+                <span>I&#39;m</span>
+               <span>Front-End Developer</span>
             </h1>
         </div>
     );

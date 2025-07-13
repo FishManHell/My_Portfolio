@@ -12,8 +12,8 @@ export const SectionHeader = (props: SectionHeaderProps) => {
 
     return (
         <div className={classNames(cls["section-header"], className)}>
-            {title && <h1 className={cls["section-header__title"]}>{title}</h1>}
-            {subtitle && <h2 className={cls["section-header__subtitle"]}>{subtitle}</h2>}
+            {title && <h1 className={cls["section-header-title"]}>{title}</h1>}
+            {subtitle && <h2 className={cls["section-header-subtitle"]}>{subtitle}</h2>}
         </div>
     );
 };
