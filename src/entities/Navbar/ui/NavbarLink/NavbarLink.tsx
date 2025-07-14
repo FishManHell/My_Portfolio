@@ -14,7 +14,7 @@ export const NavbarLink = memo((props: NavbarLinkProps) => {
 
     return (
         <AppLink className={classNames(cls["navbar-link-item"], className)} to={path}>
-            <span className={cls["navbar-link-item__text"]}>
+            <span className={cls["navbar-link-item-text"]}>
                 {text}
             </span>
         </AppLink>
