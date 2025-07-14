@@ -17,3 +17,9 @@ export const Primary: Story = {
         project: projectCard
     }
 };
+
+export const Loading: Story = {
+    args: {
+        loading: true
+    }
+};

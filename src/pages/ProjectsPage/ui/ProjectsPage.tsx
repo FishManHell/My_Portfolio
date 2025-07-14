@@ -16,7 +16,11 @@ const ProjectsPage = (props: ProjectsPageProps) => {
 
     return (
         <div className={classNames(cls["projects-page"], className)}>
-            <ProjectsList projects={result} className={cls["projects-page-list"]}/>
+            <ProjectsList
+                projects={result}
+                projectsLoading={loading}
+                className={cls["projects-page-list"]}
+            />
         </div>
     );
 };

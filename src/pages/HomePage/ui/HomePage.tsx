@@ -25,8 +25,8 @@ const HomePage = (props: HomePageProps) => {
     return (
         <div className={classNames(cls["home"], className)}>
             <Introduction/>
-            <TechStack techStackList={finalResults?.[0]}/>
-            <Projects projects={finalResults?.[1]}/>
+            <TechStack techStackList={finalResults?.[0]} techStackLoading={loading}/>
+            <Projects projects={finalResults?.[1]} projectsLoading={loading}/>
             <Footer/>
         </div>
     );

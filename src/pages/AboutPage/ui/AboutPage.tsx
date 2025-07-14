@@ -7,7 +7,7 @@ import {TimeLineCard} from "shared/ui/TimelineCard/module/types/timeLineCardType
 
 interface AboutPageProps {
     className?: string;
-    mockResults?: [TimeLineCard[], TimeLineCard[]] // just for storybook
+    mockResults?: [TimeLineCard[], TimeLineCard[]] // only for storybook
 }
 
 const AboutPage = (props: AboutPageProps) => {
@@ -26,6 +26,19 @@ const AboutPage = (props: AboutPageProps) => {
                        Looking to contribute my skills and creativity to challenging
                        projects`
 
+
+    const timeLineListRenderer = (index: number) => {
+        if (loading) return (
+            <>
+                <TimelineCard loading/>
+                <TimelineCard loading/>
+                <TimelineCard loading/>
+            </>
+        )
+        return finalResults?.[index].map(item => <TimelineCard timelineCard={item} key={item.id}/>) ?? null
+    }
+
+
     return (
         <div className={classNames(cls["about-page"], {}, [className])}>
             <SectionHeader
@@ -38,13 +51,13 @@ const AboutPage = (props: AboutPageProps) => {
             <header className={cls["about-page-experience-header"]}>
                 <h2>Work Experience</h2>
             </header>
-                {finalResults?.[0].map(item => <TimelineCard timelineCard={item} key={item.id}/>)}
+                {timeLineListRenderer(0)}
             </section>
             <section className={cls["about-page-education"]}>
                 <header className={cls["about-page-education-header"]}>
                     <h2>Education</h2>
                 </header>
-                {finalResults?.[1].map(item => <TimelineCard timelineCard={item} key={item.id}/>)}
+                {timeLineListRenderer(1)}
             </section>
         </div>
     );

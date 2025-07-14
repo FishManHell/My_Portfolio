@@ -16,7 +16,7 @@ const TechStackPage = (props: TechStackPageProps) => {
 
     return (
         <div className={classNames(cls["tech-stack-page"], className)}>
-            <TechStack techStackList={result}/>
+            <TechStack techStackList={result} techStackLoading={loading}/>
         </div>
     );
 };

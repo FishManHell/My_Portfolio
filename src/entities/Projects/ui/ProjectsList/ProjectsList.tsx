@@ -7,25 +7,39 @@ import {Project} from "../../module/types/project";
 
 interface ProjectsListProps {
     className?: string;
-    projects?: Project[]
+    projects?: Project[];
+    projectsLoading?: boolean;
 }
 
 export const ProjectsList = (props: ProjectsListProps) => {
-    const {className, projects} = props;
+    const {className, projects, projectsLoading} = props;
 
     const printProjectItems = useMemo(() => {
         return projects?.map(project => <ProjectItem project={project} key={project.id}/>)
     }, [projects]);
 
-    return (
-        <section className={classNames(cls["projects-list"], className)}>
-            <SectionHeader
-                title="Projects"
-                subtitle="Things I’ve built so far"
-            />
-            <article className={cls["projects-list__project-item-container"]}>
+    const ProjectListRenderer = () => {
+        if (projectsLoading) {
+            return (
+                <article className={cls["projects-list-project-item-container"]}>
+                    <ProjectItem loading/>
+                    <ProjectItem loading/>
+                    <ProjectItem loading/>
+                    <ProjectItem loading/>
+                </article>
+            )
+        }
+        return (
+            <article className={cls["projects-list-project-item-container"]}>
                 {printProjectItems}
             </article>
+        )
+    }
+
+    return (
+        <section className={classNames(cls["projects-list"], className)}>
+            <SectionHeader title="Projects" subtitle="Things I’ve built so far"/>
+            <ProjectListRenderer/>
         </section>
     );
 };

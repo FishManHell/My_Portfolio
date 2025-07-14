@@ -100,6 +100,8 @@
   }
 }
 
+
+
 @media screen and (max-width: 450px) {
   .project-item {
     width: 320px;
@@ -130,5 +132,11 @@
 
   .project-item-footer {
     margin-top: 25px;
+  }
+
+  .project-item-skeleton {
+    .project-item-content {
+      margin-top: 270px;
+    }
   }
 }

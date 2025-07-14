@@ -4,14 +4,30 @@ import {SectionHeader} from "shared/ui/SectionHeader";
 import {Icon} from "shared/ui/Icon";
 import {techStacksIconCollection} from "../model/mock/tech_stacks";
 import {TechStackItem} from "../model/types/types";
+import {Skeleton} from "shared/ui/Skeleton";
 
 interface TechStackProps {
     className?: string;
     techStackList?: TechStackItem[];
+    techStackLoading?: boolean;
+}
+
+const TechStackSkeleton = () => {
+    return Array.from({length: 10}).map((_, index) => {
+        return (
+            <Skeleton
+                key={index}
+                width={120}
+                height={120}
+                border={"10px"}
+                className={cls['tech-stack-icons-container-skeleton-item']}
+            />
+        )
+    })
 }
 
 export const TechStack = (props: TechStackProps) => {
-    const {className, techStackList} = props;
+    const {className, techStackList, techStackLoading} = props;
 
     return (
         <div className={classNames(cls["tech-stack"], {}, [className])}>
@@ -20,16 +36,15 @@ export const TechStack = (props: TechStackProps) => {
                 subtitle={"Technologies I’ve been working with recently"}
             />
             <div className={cls["tech-stack-icons-container"]}>
-                {techStackList?.map(({icon_key, id}) => {
-                    if (techStacksIconCollection[icon_key]) {
-                        return (
-                            <Icon
-                                Svg={techStacksIconCollection[icon_key]}
-                                className={classNames(cls['tech-stack-icons-container-icon'], cls[icon_key])}
-                                key={id}
-                            />
-                        )
-                    }
+                {techStackLoading && <TechStackSkeleton/>}
+                {techStackList && techStackList?.map(({icon_key, id}) => {
+                   return (
+                       <Icon
+                           Svg={techStacksIconCollection[icon_key]}
+                           className={classNames(cls['tech-stack-icons-container-icon'], cls[icon_key])}
+                           key={id}
+                       />
+                   )
                 })}
             </div>
         </div>

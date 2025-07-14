@@ -19,3 +19,9 @@ export const Primary: Story = {
         ]
     }
 };
+
+export const Loader: Story = {
+    args: {
+        techStackLoading: true
+    }
+};

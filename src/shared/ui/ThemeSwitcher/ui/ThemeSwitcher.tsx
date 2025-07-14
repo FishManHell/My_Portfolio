@@ -13,9 +13,7 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
     const {className, isOpenBurgerMenu} = props;
     const {toggleTheme} = useTheme();
 
-    const mods = {
-        [cls['theme-switcher-opened-burger-menu']]: isOpenBurgerMenu
-    }
+    const mods = {[cls['theme-switcher-opened-burger-menu']]: isOpenBurgerMenu}
 
     return (
         <Button

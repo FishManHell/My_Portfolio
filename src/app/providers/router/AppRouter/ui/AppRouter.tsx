@@ -1,6 +1,7 @@
 import {Suspense, useCallback} from 'react';
 import {Route, RouteProps, Routes} from 'react-router-dom';
 import {routeConfig} from "shared/config/routeConfig/routeConfig";
+import {Loader} from "shared/ui/Loader";
 
 export const AppRouter = () => {
 
@@ -8,7 +9,7 @@ export const AppRouter = () => {
         const {element, path} = route;
 
         const suspenseWrapper = (
-            <Suspense fallback="...loading">
+            <Suspense fallback={<Loader/>}>
                 {element}
             </Suspense>
         )

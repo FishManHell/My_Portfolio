@@ -18,8 +18,15 @@ export const EducationCard: Story = {
     }
 };
 
-export const experienceCard: Story = {
+export const ExperienceCard: Story = {
     args: {
         timelineCard: baseExperienceCard
     }
 };
+
+export const Loader: Story = {
+    args: {
+        loading: true
+    }
+};
+

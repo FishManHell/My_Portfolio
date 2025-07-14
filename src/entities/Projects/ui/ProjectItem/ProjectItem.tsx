@@ -5,14 +5,18 @@ import {memo} from "react";
 import {Icon} from "shared/ui/Icon";
 import {Project} from "../../module/types/project";
 import {projectPreviewIconCollection} from "../../mocks/project_previews";
+import {SkeletonProjectItem} from "./SkeletonProjectItem";
 
 interface ProjectItemProps {
     className?: string;
-    project: Project
+    project?: Project;
+    loading?: boolean;
 }
 
 export const ProjectItem = memo((props: ProjectItemProps) => {
-    const {className, project} = props;
+    const {className, project, loading} = props;
+
+    if (loading) return <SkeletonProjectItem/>
 
     return (
         <Card className={classNames(cls["project-item"], className)}>
@@ -38,15 +42,13 @@ export const ProjectItem = memo((props: ProjectItemProps) => {
                 </footer>
             </article>
             <footer className={cls["project-item-footer"]}>
-                {project.links.map(item => {
-                    if (projectPreviewIconCollection[item.icon]) {
-                        return (
-                            <a href={item.link} className={cls["project-item-footer-preview-link"]} key={item.text}>
-                                <Icon Svg={projectPreviewIconCollection[item.icon]}/>
-                                {item.text}
-                            </a>
-                        )
-                    }
+                {project?.links.map(item => {
+                    return (
+                        <a href={item.link} className={cls["project-item-footer-preview-link"]} key={item.text}>
+                            <Icon Svg={projectPreviewIconCollection[item.icon]}/>
+                            {item.text}
+                        </a>
+                    )
                 })}
             </footer>
         </Card>
