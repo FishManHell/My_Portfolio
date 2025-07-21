@@ -44,7 +44,13 @@ export const ProjectItem = memo((props: ProjectItemProps) => {
             <footer className={cls["project-item-footer"]}>
                 {project?.links.map(item => {
                     return (
-                        <a href={item.link} className={cls["project-item-footer-preview-link"]} key={item.text}>
+                        <a
+                            href={item.link}
+                            className={cls["project-item-footer-preview-link"]}
+                            key={item.text}
+                            target={'_blank'}
+                            rel={"noreferrer"}
+                        >
                             <Icon Svg={projectPreviewIconCollection[item.icon]}/>
                             {item.text}
                         </a>
