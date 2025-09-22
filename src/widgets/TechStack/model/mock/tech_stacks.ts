@@ -8,6 +8,8 @@ import ReduxIcon from "shared/assets/icons/Redux.svg";
 import GitIcon from "shared/assets/icons/Git.svg";
 import GitHubIcon from "shared/assets/icons/GitHub.svg";
 import WebstormIcon from "shared/assets/icons/Webstorm.svg";
+import MobX from "shared/assets/icons/Mobx.svg";
+
 
 export const techStacksIconCollection = {
     html: HtmlIcon,
@@ -19,5 +21,6 @@ export const techStacksIconCollection = {
     redux: ReduxIcon,
     git: GitIcon,
     github: GitHubIcon,
-    webstorm: WebstormIcon
+    webstorm: WebstormIcon,
+    mobx: MobX
 } as const;
