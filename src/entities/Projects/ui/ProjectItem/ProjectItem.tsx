@@ -39,6 +39,10 @@ export const ProjectItem = memo((props: ProjectItemProps) => {
                             {project?.tech_stack.join(', ')}
                         </span>
                     </p>
+                    <p className={cls["project-item-content-footer-supports"]}>
+                        Device support:
+                        <span>{project?.device_support.join(', ')}</span>
+                    </p>
                 </footer>
             </article>
             <footer className={cls["project-item-footer"]}>

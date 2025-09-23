@@ -17,5 +17,6 @@ export const projectCard: Project = {
             link: 'https://github.com/FishManHell',
             text: 'View Code'
         }
-    ]
+    ],
+    device_support: ["PC"]
 }

@@ -15,4 +15,5 @@ export interface Project {
     description: string;
     tech_stack: string[];
     links: PreviewLink[];
+    device_support: string[]
 }

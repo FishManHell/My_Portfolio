@@ -49,7 +49,7 @@
   "projects": [
     {
       "id": "1",
-      "img": "https://i.ibb.co/hRBmbfrw/2025-07-21-13-52-19.png",
+      "img": "https://i.ibb.co/CjmprzX/2025-09-23-14-20-33.png",
       "title": "ToDo List",
       "description": "A simple app to manage daily tasks and stay organized",
       "tech_stack": ["TypeScript","Webpack", "SASS", "React"],
@@ -64,7 +64,8 @@
           "text": "View Code",
           "link": "https://github.com/FishManHell/ToDo"
         }
-      ]
+      ],
+      "device_support": ["PC", "Mobile", "Tablet"]
     },
     {
       "id": "2",
@@ -83,13 +84,14 @@
           "text": "View Code",
           "link": "https://github.com/FishManHell/weather_aplication"
         }
-      ]
+      ],
+      "device_support":  ["PC", "Mobile", "Tablet"]
     },
     {
       "id": "3",
       "img": "https://i.ibb.co/RkMRq00z/2025-09-22-23-02-37.png",
       "title": "Pain Desk",
-      "description": "A simple web-based paint desk with shape drawing, stroke control, color picker, and basic editing features like zoom, undo, redo, and clear.",
+      "description": "A simple web-based paint desk with shape drawing, stroke control, color picker, and basic editing features",
       "tech_stack": ["React", "MobX", "TypeScript", "SASS", "Antd", "React-Konva", "Webpack", "StoryBook"],
       "links": [
         {
@@ -102,7 +104,8 @@
           "text": "View Code",
           "link": "https://github.com/FishManHell/PaintDesk"
         }
-      ]
+      ],
+      "device_support":  ["PC"]
     }
   ],
 
