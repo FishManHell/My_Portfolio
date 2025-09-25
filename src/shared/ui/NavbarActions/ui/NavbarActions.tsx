@@ -3,7 +3,7 @@ import DownloadIcon from "shared/assets/icons/Download.svg";
 import {Icon} from "shared/ui/Icon";
 import LinkedInIcon from "shared/assets/icons/Linkedin.svg";
 import {ThemeSwitcher} from "shared/ui/ThemeSwitcher";
-import CV from "shared/assets/resource/CV-Denys-Zhyvotov-Front-End-Developer.pdf";
+import CV from "shared/assets/resource/CV_Denys_Zhyvotov.pdf";
 import classNames from "classnames";
 
 const LINKEDIN_LINK = "https://www.linkedin.com/in/denys-zhyvotov-8683611b9/";
