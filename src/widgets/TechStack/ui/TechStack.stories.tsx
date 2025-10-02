@@ -13,10 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        techStackList: [
-            {id: '1', icon_key: 'github'},
-            {id: '1', icon_key: 'javascript'}
-        ]
+        techStackList: [{name: "git"}, {name: "js"}]
     }
 };
 

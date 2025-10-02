@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
     args: {
         mockResults: [
-            [{id: '1', icon_key: 'javascript'}, {id: '2', icon_key: "github"}],
+            [{name: "js"}, {name: "git"}],
             [projectCard]
         ]
     }

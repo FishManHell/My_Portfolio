@@ -6,21 +6,19 @@ import TSIcon from "shared/assets/icons/Typescript.svg";
 import ReactIcon from "shared/assets/icons/React.svg";
 import ReduxIcon from "shared/assets/icons/Redux.svg";
 import GitIcon from "shared/assets/icons/Git.svg";
-import GitHubIcon from "shared/assets/icons/GitHub.svg";
-import WebstormIcon from "shared/assets/icons/Webstorm.svg";
-import MobX from "shared/assets/icons/Mobx.svg";
+import MobXIcon from "shared/assets/icons/Mobx.svg";
+import VueIcon from "shared/assets/icons/Vue.svg";
 
 
 export const techStacksIconCollection = {
     html: HtmlIcon,
     css: CssIcon,
     sass: SassIcon,
-    javascript: JSIcon,
-    typescript: TSIcon,
+    js: JSIcon,
+    ts: TSIcon,
     react: ReactIcon,
     redux: ReduxIcon,
     git: GitIcon,
-    github: GitHubIcon,
-    webstorm: WebstormIcon,
-    mobx: MobX
+    mobx: MobXIcon,
+    vue: VueIcon
 } as const;

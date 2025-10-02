@@ -1,51 +1,16 @@
 {
   "tech_stacks": [
-    {
-      "id": "1",
-      "icon_key": "html"
-    },
-    {
-      "id": "2",
-      "icon_key": "css"
-    },
-    {
-      "id": "3",
-      "icon_key": "sass"
-    },
-    {
-      "id": "4",
-      "icon_key": "javascript"
-    },
-    {
-      "id": "5",
-      "icon_key": "typescript"
-    },
-    {
-      "id": "6",
-      "icon_key": "react"
-    },
-    {
-      "id": "7",
-      "icon_key": "redux"
-    },
-    {
-      "id": "8",
-      "icon_key": "mobx"
-    },
-    {
-      "id": "9",
-      "icon_key": "git"
-    },
-    {
-      "id": "10",
-      "icon_key": "github"
-    },
-    {
-      "id": "11",
-      "icon_key": "webstorm"
-    }
+    {"name": "html"},
+    {"name": "css"},
+    {"name": "sass"},
+    {"name": "js"},
+    {"name": "ts"},
+    {"name": "react"},
+    {"name": "vue"},
+    {"name": "redux"},
+    {"name": "mobx"},
+    {"name": "git"}
   ],
-
   "projects": [
     {
       "id": "1",
@@ -112,7 +77,7 @@
       "img": "https://i.ibb.co/HLCf98sG/2025-10-02-18-08-18.png",
       "title": "Tic Tac Toe",
       "description": "A simple Tic Tac Toe game with interactive gameplay, allowing two players to play turns.",
-      "tech_stack": ["Vue", "TypeScript", "Storybook"],
+      "tech_stack": ["Vue", "TypeScript", "SASS", "Storybook"],
       "links": [
         {
           "icon": "link_chain",

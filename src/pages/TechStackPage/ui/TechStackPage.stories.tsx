@@ -14,8 +14,8 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
     args: {
         mockTechStacks: [
-            {id: '1', icon_key: 'github'},
-            {id: '1', icon_key: 'javascript'}
+            {name: 'git'},
+            {name: 'js'}
         ]
     }
 };
