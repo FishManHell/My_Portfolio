@@ -14,6 +14,6 @@ export const buildLoaders = ({isDev}: BuildOptions): RuleSetRule[] => {
         fileLoader,
         svgLoader,
         tsLoader,
-        styleLoader
+        ...styleLoader
     ]
 }

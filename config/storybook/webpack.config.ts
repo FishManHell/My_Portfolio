@@ -5,7 +5,7 @@ import {BuildPaths} from "../webpack/types";
 import {svgLoaders} from "../webpack/loaders/svgLoader";
 
 export default ({config}: {config: Configuration}) => {
-    const styleLoader = styleLoaders(true);
+    const [_, scssLoader] = styleLoaders(true);
     const svgLoader = svgLoaders();
 
     const {src}: BuildPaths = {
@@ -30,7 +30,7 @@ export default ({config}: {config: Configuration}) => {
             return rule;
         });
 
-    config!.module!.rules!.push(styleLoader);
+    config!.module!.rules!.push(scssLoader);
     config!.module!.rules!.push(svgLoader);
 
     config!.plugins!.push(new DefinePlugin({
