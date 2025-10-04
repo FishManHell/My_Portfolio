@@ -1,15 +1,14 @@
 :root, .app-light-theme {
-  --bg-color: #FFFFFF;
+  --bg-color: #FFF;
   --invert-bg-color: #191919;
   --invert-bg-color-rgb: 25, 25, 25;
-  --txt-color: #666666;
+  --txt-color: #666;
   --title-color-text: #42446E;
-  --bg-card-color: #FFFFFF;
-  --txt-card-title-color: #000000;
+  --bg-card-color: #FFF;
+  --txt-card-title-color: #000;
   --txt-tech-card-color: #42446E;
-  --bg-footer-line-color: #666666;
+  --bg-footer-line-color: #666;
   --invert-bg-footer-line-color: #42446E;
-
   --skeleton-color: #fff;
-  --skeleton-shadow: rgba(0 0 0 / 20%);
+  --skeleton-shadow: rgb(0 0 0 / 20%);
 }

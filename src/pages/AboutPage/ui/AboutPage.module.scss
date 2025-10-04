@@ -9,15 +9,12 @@
   width: 80%;
 }
 
-.about-page-experience, .about-page-education {
+.about-page-experience,
+.about-page-education {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.about-page-experience,
-.about-page-education {
   margin-top: 20px;
 }
 
@@ -31,7 +28,7 @@
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (width <= 560px) {
   .about-page-header {
     width: 100%;
   }
@@ -39,13 +36,14 @@
   .about-page-experience-header,
   .about-page-education-header {
     margin: 30px 0;
+
     h2 {
       font-size: var(--l-size);
     }
   }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (width <= 460px) {
   .about-page-header {
     h1 {
       font-size: var(--l-size);
@@ -57,7 +55,7 @@
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (width <= 370px) {
   .about-page-header {
     h2 {
       font-size: var(--m-size);

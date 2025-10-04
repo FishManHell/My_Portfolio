@@ -34,8 +34,8 @@ export const ProjectsList = (props: ProjectsListProps) => {
                 swipeable
                 // removeArrowOnDeviceType={["mobile"]}
                 responsive={responsive}
-                containerClass={cls["projects-list_carousel_container"]}
-                itemClass={cls["projects-list_carousel_container_item"]}
+                containerClass={cls["projects-list-carousel-container"]}
+                itemClass={cls["projects-list-carousel-container-item"]}
             >
                 {projectsLoading && [1, 2, 3, 4].map(i => <ProjectItem loading key={i} />)}
                 {!projectsLoading && printProjectItems?.length && printProjectItems}

@@ -1,4 +1,3 @@
-import cls from "./NavbarItems.module.scss";
 import classNames from "classnames";
 import {memo} from "react";
 import {NavbarLink} from "../NavbarLink/NavbarLink";
@@ -12,7 +11,7 @@ export const NavbarLinks = memo((props: NavbarItemsProps) => {
     const {className} = props;
 
     return (
-        <section className={classNames(cls["navbar-items"], className)}>
+        <section className={classNames("navbar-items", className)}>
             {NavbarItemsList.map(item => <NavbarLink item={item} key={item.path}/>)}
         </section>
     );

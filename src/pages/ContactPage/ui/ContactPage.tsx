@@ -1,4 +1,3 @@
-import cls from "./ContactPage.module.scss"
 import classNames from "classnames";
 import {Footer} from "widgets/Footer";
 
@@ -7,11 +6,12 @@ interface ContactPageProps {
 }
 
 const ContactPage = (props: ContactPageProps) => {
-    const {className} = props
-    return (
-        <div className={classNames(cls["contact-page"], {}, [className])}>
-            <div>
+    const {className} = props;
 
+    return (
+        <div className={classNames("contact-page", className)}>
+            <div>
+                Soon
             </div>
 
             <Footer/>

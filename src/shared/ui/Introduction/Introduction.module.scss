@@ -8,7 +8,6 @@
   font-size: 3.625rem;
   width: 70%;
   margin: 0 auto;
-
   display: inline-block;
   color: transparent;
   background: var(--gradient-color-text);
@@ -20,7 +19,7 @@
     color: #fff;
   }
 
-  @media screen and (max-width: 800px){
+  @media screen and (width <= 800px){
     .introduction-title, span {
       font-size: 2.625rem;
     }

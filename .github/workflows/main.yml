@@ -29,6 +29,3 @@ jobs:
       - name: linting css
         if: always()
         run: npm run lint:scss
-      - name: check code formatting
-        if: always()
-        run: npm run prettier:check

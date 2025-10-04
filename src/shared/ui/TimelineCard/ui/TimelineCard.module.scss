@@ -71,7 +71,7 @@ time {
   font-weight: 500;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (width <= 560px) {
   .timeline-card-header-title {
     font-size: var(--m-size);
   }
@@ -83,7 +83,7 @@ time {
   }
 }
 
-@media screen and  (max-width: 400px) {
+@media screen and  (width <= 400px) {
   .timeline-card-header-title {
     font-size: 0.85rem;
   }
