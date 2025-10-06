@@ -12,6 +12,7 @@ export type HttpMethod = 'get' | 'post' | 'put' | 'delete';
  * @returns Promise with typing data
  */
 
+
 export const callApi = async <T = any>(
     method: HttpMethod, url: string, payload?: any
 ): Promise<AxiosResponse<T>> => {

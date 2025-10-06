@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const $api = axios.create({
-    baseURL: __API_URL__,
+    baseURL: "https://production-server-project-profile.vercel.app",
 })

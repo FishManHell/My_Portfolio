@@ -16,7 +16,7 @@ export interface BuildPaths {
 export interface BuildOptions {
     mode: Mode;
     paths: BuildPaths;
-    apiUrl: string;
+    // apiUrl: string;
     isDev: boolean;
     port: number;
     project: string

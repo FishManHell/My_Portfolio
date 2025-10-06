@@ -3,12 +3,12 @@ import {BuildPaths, Env} from "./config/webpack/types";
 import {BuildConfigurations} from "./config/webpack/BuildConfigurations";
 
 export default (env: Env) => {
-    const {mode: envMode, port: envPort, apiUrl: envApiUrl} = env
+    const {mode: envMode, port: envPort} = env
 
     const mode = envMode || 'development';
     const isDev = mode === 'development';
     const port = envPort || 3000;
-    const apiUrl = envApiUrl || 'http://localhost:8000';
+    // const apiUrl = envApiUrl || 'http://localhost:8000';
 
     const paths: BuildPaths = {
         html: resolve(__dirname, 'public', 'index.html'),
@@ -22,7 +22,7 @@ export default (env: Env) => {
         isDev,
         port,
         paths,
-        apiUrl,
+        // apiUrl,
         project: 'frontend',
     })
 }
