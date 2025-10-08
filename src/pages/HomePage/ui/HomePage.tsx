@@ -1,10 +1,10 @@
 import cls from "./Home.module.scss"
 import classNames from "classnames"
-import {Introduction} from "shared/ui/Introduction/Introduction";
+import {Introduction} from "shared/ui/Introduction";
 import {ProjectsList as Projects} from "entities/Projects";
 import {TechStack} from "widgets/TechStack";
 import {Footer} from "widgets/Footer";
-import {useMultiFetch} from "shared/libs/hooks/useMultiFetch";
+import {useMultiFetch} from "shared/libs/hooks";
 import {TechStackItem} from "widgets/TechStack";
 import {Project} from "entities/Projects";
 

@@ -16,7 +16,7 @@ export const Card = (props: CardProps) => {
     const {className, theme = CardTheme.NORMAL, children} = props;
 
     return (
-        <div className={classNames(cls["card"], [className, cls[theme]])}>
+        <div className={classNames(cls["card"], [className, cls[theme]])} data-testid={"card"}>
             {children}
         </div>
     );

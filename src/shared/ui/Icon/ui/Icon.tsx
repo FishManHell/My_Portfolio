@@ -2,7 +2,7 @@ import cls from "./Icon.module.scss"
 import classNames from "classnames";
 import {FC, SVGProps} from "react";
 
-interface IconProps {
+export interface IconProps {
     className?: string;
     Svg: FC<SVGProps<SVGSVGElement>>;
 }
@@ -10,5 +10,9 @@ interface IconProps {
 export const Icon = (props: IconProps) => {
     const {className, Svg} = props;
 
-    return <Svg className={classNames(cls["icon"], className)}/>;
+    return (
+        <div data-testid="icon">
+            <Svg className={classNames(cls["icon"], className)}/>
+        </div>
+    )
 };

@@ -20,11 +20,11 @@ export const NavbarActions = ({className, isOpenBurgerMenu}: NavbarActionsProps)
     }
 
     return (
-        <div className={classNames(cls["navbar-actions"], className, mods)}>
+        <div className={classNames(cls["navbar-actions"], className, mods)} data-testid="navbar-actions">
             <section className={cls["navbar-actions-icon-links-container"]}>
                 <a
                     className={cls["navbar-actions-icon-links-container-download-cv"]}
-                    download title={"Download CV"} href={CV}
+                    download title={"Download CV"} href={CV || "#"}
                 >
                     <DownloadIcon/>
                 </a>

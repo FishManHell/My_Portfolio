@@ -13,7 +13,7 @@ export const HamburgerComponent = () => {
 
     return (
         <>
-            <Modal isOpen={isOpen} onClose={onClose} className={cls['burger-navbar']}>
+            <Modal isOpen={isOpen} onClose={onClose} className={cls['burger-navbar']} data-testid="hamburger">
                 <NavbarLinks className={cls["navbar-links-container"]}/>
             </Modal>
             <NavbarActions isOpenBurgerMenu={isOpen}/>

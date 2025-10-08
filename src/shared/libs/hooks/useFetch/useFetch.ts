@@ -1,7 +1,7 @@
 import {useCallback, useState} from "react";
 import {AxiosError} from "axios";
 import {callApi, HttpMethod} from "shared/api/callApi";
-import {useInitialEffect} from "shared/libs/hooks/useInitialEffect";
+import {useInitialEffect} from "shared/libs/hooks";
 
 interface UseFetchProps {
     method: HttpMethod;

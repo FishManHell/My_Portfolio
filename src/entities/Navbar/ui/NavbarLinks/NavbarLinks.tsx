@@ -11,7 +11,7 @@ export const NavbarLinks = memo((props: NavbarItemsProps) => {
     const {className} = props;
 
     return (
-        <section className={classNames("navbar-items", className)}>
+        <section className={classNames("navbar-links", className)} data-testid={"navbar-links"}>
             {NavbarItemsList.map(item => <NavbarLink item={item} key={item.path}/>)}
         </section>
     );

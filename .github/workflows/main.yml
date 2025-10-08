@@ -29,3 +29,6 @@ jobs:
       - name: linting css
         if: always()
         run: npm run lint:scss
+      - name: unit testing
+        if: always()
+        run: npm run test:unit

@@ -1,7 +1,7 @@
 import cls from "./ProjectsPage.module.scss"
 import classNames from "classnames";
 import {Project, ProjectsList} from "entities/Projects";
-import {useFetch} from "shared/libs/hooks/useFetch";
+import {useFetch} from "shared/libs/hooks";
 
 interface ProjectsPageProps {
     className?: string;

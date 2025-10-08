@@ -1,7 +1,7 @@
 import cls from "./TechStackPage.module.scss"
 import classNames from "classnames";
 import {TechStack, TechStackItem} from "widgets/TechStack";
-import {useFetch} from "shared/libs/hooks/useFetch";
+import {useFetch} from "shared/libs/hooks";
 
 interface TechStackPageProps {
     className?: string;

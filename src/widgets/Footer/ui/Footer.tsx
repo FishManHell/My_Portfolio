@@ -15,7 +15,7 @@ export const Footer = (props: FooterProps) => {
     const {className} = props
 
     return (
-        <footer className={classNames(cls["footer"], {}, [className])}>
+        <footer className={classNames(cls["footer"], className)} data-testid={'footer'}>
             <section className={cls['footer-contacts']}>
                 <a href={`tel:${phone}`} className={classNames(cls['footer-contacts-link'], cls['phone-link'])}>
                     {phone}

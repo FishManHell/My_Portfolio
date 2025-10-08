@@ -19,6 +19,7 @@ export const Button = (props: ButtonProps) => {
 
     return (
         <button
+            data-testid="button"
             className={classNames(cls["button"], [className, cls[size]])}
             disabled={disabled}
             {...restProps}

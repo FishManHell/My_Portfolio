@@ -12,7 +12,7 @@ export const MetaCard = memo((props: TimelineCardMeta) => {
     const metaIcon = metaIconCollection[icon];
 
     const DateContent = (
-        <p className={cls["timeline-card-meta-duration"]}>
+        <div className={cls["timeline-card-meta-duration"]} data-testid="meta-card">
             {metaIcon && <Icon Svg={metaIcon}/>}
             <time dateTime={date?.from} className={cls["timeline-card-meta-duration-from"]}>
                 {date?.from}
@@ -21,15 +21,15 @@ export const MetaCard = memo((props: TimelineCardMeta) => {
             <time dateTime={date?.to} className={cls["timeline-card-meta-duration-to"]}>
                 {date?.to}
             </time>
-        </p>
+        </div>
     )
 
     if (isDate) return DateContent;
 
     return (
-        <p className={cls[`timeline-card-meta-${label}`]}>
+        <div className={cls[`timeline-card-meta-${label}`]} data-testid="meta-card">
             {metaIcon && <Icon Svg={metaIcon}/>}
             {text}
-        </p>
+        </div>
     );
 });

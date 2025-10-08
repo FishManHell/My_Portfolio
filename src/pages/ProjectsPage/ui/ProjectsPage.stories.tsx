@@ -14,6 +14,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        mockProjects: [projectCard]
+        mockProjects: [projectCard, {...projectCard, id: '2'}, {...projectCard, id: '3'}]
     }
 };

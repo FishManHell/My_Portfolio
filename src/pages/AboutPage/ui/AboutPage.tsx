@@ -2,7 +2,7 @@ import cls from "./AboutPage.module.scss"
 import classNames from "classnames"
 import {SectionHeader} from "shared/ui/SectionHeader";
 import {TimelineCard} from "shared/ui/TimelineCard";
-import {useMultiFetch} from "shared/libs/hooks/useMultiFetch";
+import {useMultiFetch} from "shared/libs/hooks";
 import {TimeLineCard} from "shared/ui/TimelineCard/module/types/timeLineCardTypes";
 
 interface AboutPageProps {

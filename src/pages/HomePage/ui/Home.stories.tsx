@@ -16,7 +16,7 @@ export const Primary: Story = {
     args: {
         mockResults: [
             [{name: "js"}, {name: "git"}],
-            [projectCard]
+            [projectCard, {...projectCard, id: '2'}, {...projectCard, id: '3'}]
         ]
     }
 };

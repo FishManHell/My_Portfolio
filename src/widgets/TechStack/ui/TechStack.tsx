@@ -35,7 +35,7 @@ export const TechStack = (props: TechStackProps) => {
                 title="Tech Stack"
                 subtitle={"Technologies I’ve been working with recently"}
             />
-            <div className={cls["tech-stack-icons-container"]}>
+            <div className={cls["tech-stack-icons-container"]} >
                 {techStackLoading && <TechStackSkeleton/>}
                 {techStackList && techStackList?.map(({name}) => {
                    return (
@@ -43,6 +43,7 @@ export const TechStack = (props: TechStackProps) => {
                            Svg={techStacksIconCollection[name]}
                            className={classNames(cls['tech-stack-icons-container-icon'], cls[name])}
                            key={name}
+                           data-testid="icon"
                        />
                    )
                 })}
