@@ -28,9 +28,7 @@ export const useFetch = <T = any> ({method, endpoint, payload}: UseFetchProps) =
         }
     }, [method, endpoint, payload]);
 
-    useInitialEffect(() => {
-        fetch()
-    });
+    useInitialEffect(() => fetch());
 
     return {data, loading, error};
 }

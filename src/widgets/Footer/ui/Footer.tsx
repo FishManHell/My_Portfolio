@@ -3,9 +3,9 @@ import classNames from "classnames";
 import {Icon} from "shared/ui/Icon";
 import LinkedInIcon from "shared/assets/icons/Linkedin.svg";
 
-const linkedInLink = "https://www.linkedin.com/in/denys-zhyvotov-8683611b9/";
-const email = "denyszhyvotov@gmail.com";
-const phone = "+972532201230";
+export const phoneContact = "https://www.linkedin.com/in/denys-zhyvotov-8683611b9/";
+export const emailContact = "denyszhyvotov@gmail.com";
+export const linkedInContact = "+972532201230";
 
 interface FooterProps {
     className?: string;
@@ -17,13 +17,13 @@ export const Footer = (props: FooterProps) => {
     return (
         <footer className={classNames(cls["footer"], className)} data-testid={'footer'}>
             <section className={cls['footer-contacts']}>
-                <a href={`tel:${phone}`} className={classNames(cls['footer-contacts-link'], cls['phone-link'])}>
-                    {phone}
+                <a href={`tel:${phoneContact}`} className={classNames(cls['footer-contacts-link'], cls['phone-link'])}>
+                    {phoneContact}
                 </a>
-                <a href={`mailto:${email}`} className={classNames(cls['footer-contacts-link'], cls['email-link'])}>
-                    {email}
+                <a href={`mailto:${emailContact}`} className={classNames(cls['footer-contacts-link'], cls['email-link'])}>
+                    {emailContact}
                 </a>
-                <a href={linkedInLink} className={classNames(cls['footer-contacts-link'], cls['social-link'])} target={'_black'}>
+                <a href={linkedInContact} className={classNames(cls['footer-contacts-link'], cls['social-link'])} target={'_black'}>
                     <Icon Svg={LinkedInIcon}/>
                 </a>
             </section>

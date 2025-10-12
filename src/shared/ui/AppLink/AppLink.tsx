@@ -12,7 +12,12 @@ export const AppLink = (props: AppLinkProps) => {
     const {className, children, to, ...otherProps} = props;
 
     return (
-        <Link to={to} className={classNames(cls['app-link'], className)} {...otherProps} data-testid="link">
+        <Link
+            to={to}
+            className={classNames(cls['app-link'], className)}
+            data-testid="link"
+            {...otherProps}
+        >
             {children}
         </Link>
     );

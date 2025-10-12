@@ -15,9 +15,7 @@ interface NavbarActionsProps {
 
 export const NavbarActions = ({className, isOpenBurgerMenu}: NavbarActionsProps) => {
 
-    const mods = {
-        [cls["burger-navbar-actions-opened"]]: isOpenBurgerMenu
-    }
+    const mods = {[cls["burger-navbar-actions-opened"]]: isOpenBurgerMenu}
 
     return (
         <div className={classNames(cls["navbar-actions"], className, mods)} data-testid="navbar-actions">

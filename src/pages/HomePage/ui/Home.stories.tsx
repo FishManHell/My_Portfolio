@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import HomePage from "./HomePage";
-import {projectCard} from "entities/Projects";
+import {projectCards} from "entities/Projects";
 
 const meta = {
     title: 'pages/HomePage',
@@ -16,7 +16,7 @@ export const Primary: Story = {
     args: {
         mockResults: [
             [{name: "js"}, {name: "git"}],
-            [projectCard, {...projectCard, id: '2'}, {...projectCard, id: '3'}]
+            projectCards
         ]
     }
 };

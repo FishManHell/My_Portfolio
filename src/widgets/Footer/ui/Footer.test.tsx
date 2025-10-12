@@ -1,4 +1,4 @@
-import {Footer} from "./Footer";
+import {Footer, phoneContact, emailContact, linkedInContact} from "./Footer";
 import {render, screen} from "@testing-library/react";
 
 describe("Footer", () => {
@@ -16,11 +16,8 @@ describe("Footer", () => {
 
         const [phoneLink, emailLink, linkedInLink] = links;
 
-        expect(phoneLink).toHaveAttribute("href", "tel:+972532201230");
-        expect(emailLink).toHaveAttribute("href", "mailto:denyszhyvotov@gmail.com");
-        expect(linkedInLink).toHaveAttribute(
-            "href",
-            "https://www.linkedin.com/in/denys-zhyvotov-8683611b9/"
-        );
+        expect(phoneLink).toHaveAttribute("href", `tel:${phoneContact}`);
+        expect(emailLink).toHaveAttribute("href", `mailto:${emailContact}`);
+        expect(linkedInLink).toHaveAttribute("href", linkedInContact);
     });
 })

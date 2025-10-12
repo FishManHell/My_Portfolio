@@ -35,7 +35,7 @@ module.exports = {
     moduleNameMapper: {
 	    '\\.s?css$': 'identity-obj-proxy',
 	    '\\.svg$': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-	    '\\.pdf$': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+	    '\\.pdf$': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
 
     globals: { __PROJECT__: 'jest' },

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { TechStack } from "./TechStack";
-import {TechStackItem} from "../model/types/types";
+import {mockedTechStackList} from "shared/mocks";
 
 describe("TechStack", () => {
     test("renders section header", () => {
@@ -18,12 +18,7 @@ describe("TechStack", () => {
     });
 
     test("renders icons when techStackList is provided", () => {
-        const techStackList: TechStackItem[] = [
-            { name: "js" },
-            { name: "ts" },
-        ];
-
-        render(<TechStack techStackList={techStackList} />);
+        render(<TechStack techStackList={mockedTechStackList} />);
         const icons = screen.getAllByTestId("icon");
         expect(icons.length).toBe(2);
     });

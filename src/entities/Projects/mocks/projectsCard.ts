@@ -1,4 +1,5 @@
 import {Project} from "../module/types/project";
+import {createMockList} from "shared/libs/test";
 
 export const projectCard: Project = {
     id: "1",
@@ -20,3 +21,5 @@ export const projectCard: Project = {
     ],
     device_support: ["PC"]
 }
+
+export const projectCards = createMockList(projectCard, 3);

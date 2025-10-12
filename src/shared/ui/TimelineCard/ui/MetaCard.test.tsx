@@ -1,18 +1,11 @@
-import { render, screen } from "@testing-library/react";
-import { MetaCard } from "./MetaCard";
-import {TimelineCardMeta, TimelineMetaLabel} from "../module/types/timeLineCardTypes";
+import {render, screen} from "@testing-library/react";
+import {MetaCard} from "./MetaCard";
+import {TimelineMetaLabel} from "../module/types/timeLineCardTypes";
+import {metaCard} from "../mocks/meta";
 
 describe("MetaCard", () => {
     test("render with date", () => {
-        const meta: TimelineCardMeta = {
-            icon: "calendar",
-            text: "",
-            label: TimelineMetaLabel.DATE,
-            date: { from: "2023-09", to: "present day" },
-        };
-
-        render(<MetaCard {...meta} />);
-
+        render(<MetaCard {...metaCard} />);
         expect(screen.getByText("2023-09")).toBeInTheDocument();
         expect(screen.getByText("present day")).toBeInTheDocument();
         expect(screen.getByTestId("meta-card")).toBeInTheDocument();
@@ -20,13 +13,7 @@ describe("MetaCard", () => {
     });
 
     test("render COMPANY label", () => {
-        const meta: TimelineCardMeta = {
-            icon: "location_marker",
-            text: "Dnipro",
-            label: TimelineMetaLabel.COMPANY,
-        };
-
-        render(<MetaCard {...meta} />);
+        render(<MetaCard {...metaCard} label={TimelineMetaLabel.COMPANY}/>);
         expect(screen.getByText("Dnipro")).toBeInTheDocument();
         expect(screen.getByTestId("meta-card")).toBeInTheDocument();
         expect(screen.getByTestId("icon")).toBeInTheDocument();

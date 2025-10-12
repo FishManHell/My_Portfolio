@@ -30,7 +30,7 @@ export const TechStack = (props: TechStackProps) => {
     const {className, techStackList, techStackLoading} = props;
 
     return (
-        <div className={classNames(cls["tech-stack"], className)}>
+        <div className={classNames(cls["tech-stack"], className)} data-testid="tech-stack">
             <SectionHeader
                 title="Tech Stack"
                 subtitle={"Technologies I’ve been working with recently"}
@@ -43,7 +43,6 @@ export const TechStack = (props: TechStackProps) => {
                            Svg={techStacksIconCollection[name]}
                            className={classNames(cls['tech-stack-icons-container-icon'], cls[name])}
                            key={name}
-                           data-testid="icon"
                        />
                    )
                 })}

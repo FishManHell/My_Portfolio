@@ -1,18 +1,19 @@
 import cls from "./AboutPage.module.scss"
 import classNames from "classnames"
 import {SectionHeader} from "shared/ui/SectionHeader";
-import {TimelineCard} from "shared/ui/TimelineCard";
+import {TimelineCard, TimeLineCard} from "shared/ui/TimelineCard";
 import {useMultiFetch} from "shared/libs/hooks";
-import {TimeLineCard} from "shared/ui/TimelineCard/module/types/timeLineCardTypes";
+
+type AboutPageData = [TimeLineCard[], TimeLineCard[]]
 
 interface AboutPageProps {
     className?: string;
-    mockResults?: [TimeLineCard[], TimeLineCard[]] // only for storybook
+    mockResults?: AboutPageData // only for storybook
 }
 
 const AboutPage = (props: AboutPageProps) => {
     const {className, mockResults} = props;
-    const {results, loading, error} = useMultiFetch<[TimeLineCard[], TimeLineCard[]]>([
+    const {results, loading, error} = useMultiFetch<AboutPageData>([
         {method: "get", url: "/works"},
         {method: "get", url: "/educations"}
     ])
@@ -40,7 +41,7 @@ const AboutPage = (props: AboutPageProps) => {
 
 
     return (
-        <div className={classNames(cls["about-page"], {}, [className])}>
+        <div className={classNames(cls["about-page"], className)}>
             <SectionHeader
                 title={'About Me'}
                 subtitle={subtitle}

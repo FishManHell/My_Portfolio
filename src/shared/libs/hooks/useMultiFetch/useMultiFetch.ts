@@ -1,17 +1,19 @@
 import {useState} from "react";
 import {AxiosError} from "axios";
 import {callApi, HttpMethod} from "shared/api/callApi";
-import {useInitialEffect} from "shared/libs/hooks/useInitialEffect/useInitialEffect";
+import {useInitialEffect} from "../useInitialEffect/useInitialEffect";
 
 interface RequestItem<T> {
     method: HttpMethod;
     url: string;
-    payload?: any
+    payload?: unknown
 }
 
-type RequestsType<T> = { [K in keyof T]: RequestItem<T[K]> }
+export type RequestsType<T extends unknown[]> = {
+    readonly [K in keyof T]: RequestItem<T[K]>
+};
 
-export const useMultiFetch = <T extends any[]>(requests: RequestsType<T>) => {
+export const useMultiFetch = <T extends unknown[]>(requests: RequestsType<T>) => {
     const [results, setResults] = useState<T | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<AxiosError | null>(null);

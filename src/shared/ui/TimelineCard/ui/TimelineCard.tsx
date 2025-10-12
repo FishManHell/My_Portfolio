@@ -33,7 +33,7 @@ export const TimelineCard = memo((props: TimelineCardProps) => {
     }
 
     return (
-        <article className={classNames(cls["timeline-card"], className)}>
+        <article className={classNames(cls["timeline-card"], className)} data-testid={"timeline-card"}>
             <header className={cls["timeline-card-header"]} >
                 <h2 className={cls["timeline-card-header-title"]}>{timelineCard?.title}</h2>
 

@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import {ProjectsList} from "./ProjectsList";
-import {projectCard} from "entities/Projects";
+import {projectCards as projects} from "entities/Projects";
 
 const meta = {
     title: 'entities/ProjectsList',
@@ -14,6 +14,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        projects: [projectCard, projectCard, projectCard, projectCard]
+        projects
     }
 };

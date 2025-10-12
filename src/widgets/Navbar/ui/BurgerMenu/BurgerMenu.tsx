@@ -16,6 +16,7 @@ export const BurgerMenu = memo((props: BurgerMenuProps) => {
         <Button
             className={classNames(cls['burger-menu'], className, {[cls['active']]: isOpen})}
             onClick={onToggle}
+            data-testid="burger-button"
         >
             <span className={cls['burger-menu-item']}/>
             <span className={cls['burger-menu-item']}/>
