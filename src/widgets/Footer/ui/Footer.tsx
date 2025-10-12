@@ -3,9 +3,9 @@ import classNames from "classnames";
 import {Icon} from "shared/ui/Icon";
 import LinkedInIcon from "shared/assets/icons/Linkedin.svg";
 
-export const phoneContact = "https://www.linkedin.com/in/denys-zhyvotov-8683611b9/";
+export const phoneContact = "+972532201230";
 export const emailContact = "denyszhyvotov@gmail.com";
-export const linkedInContact = "+972532201230";
+export const linkedInContact = "https://www.linkedin.com/in/denys-zhyvotov-8683611b9/";
 
 interface FooterProps {
     className?: string;
