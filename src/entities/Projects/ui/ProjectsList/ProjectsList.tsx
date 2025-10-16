@@ -14,13 +14,13 @@ export interface ProjectsListProps {
     projectsLoading?: boolean;
 }
 
+
 export const ProjectsList = (props: ProjectsListProps) => {
     const {className, projects, projectsLoading} = props;
 
     const printProjectItems = useMemo(() => {
         return projects?.map(project => <ProjectItem project={project} key={project.id}/>)
     }, [projects]);
-
 
     return (
         <section className={classNames(cls["projects-list"], className)} data-testid="projects-list">
@@ -31,8 +31,8 @@ export const ProjectsList = (props: ProjectsListProps) => {
                 slidesToSlide={1}
                 infinite
                 keyBoardControl
+                draggable={false}
                 swipeable
-                // removeArrowOnDeviceType={["mobile"]}
                 responsive={responsive}
                 containerClass={cls["projects-list-carousel-container"]}
                 itemClass={cls["projects-list-carousel-container-item"]}
