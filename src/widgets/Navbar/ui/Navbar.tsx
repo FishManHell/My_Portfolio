@@ -6,7 +6,7 @@ import {HamburgerComponent} from "features/HamburgerComponent";
 import {NavbarActions} from "shared/ui/NavbarActions";
 
 const BODY_PADDING = 10
-const MIN_SIZE = 560
+const MIN_SIZE = 600
 
 const MIN_CONTENT_WIDTH = MIN_SIZE - BODY_PADDING * 2;
 
