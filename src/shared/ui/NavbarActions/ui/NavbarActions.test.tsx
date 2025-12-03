@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import {render, screen, within} from "@testing-library/react";
 import { NavbarActions } from "./NavbarActions";
 
 jest.mock("shared/ui/ThemeSwitcher", () => ({
@@ -20,9 +20,18 @@ describe("NavbarActions", () => {
 
     test("render LinkedIn link", () => {
         render(<NavbarActions />);
-        const linkedinLink = screen.getByRole("link", { name: "" }) as HTMLAnchorElement;
+        const linkedinLink = screen.getByRole("link", { name: "LinkedIn" }) as HTMLAnchorElement;
         expect(linkedinLink).toHaveAttribute("href", expect.stringContaining("linkedin.com"));
-        expect(screen.getByTestId("icon")).toBeInTheDocument();
+        const icon = within(linkedinLink).getByTestId("icon");
+        expect(icon).toBeInTheDocument();
+    });
+
+    test("render GitHub link", () => {
+        render(<NavbarActions />);
+        const gitHubLink = screen.getByRole("link", { name: "GitHub" }) as HTMLAnchorElement;
+        expect(gitHubLink).toHaveAttribute("href", expect.stringContaining("github.com"));
+        const icon = within(gitHubLink).getByTestId("icon");
+        expect(icon).toBeInTheDocument();
     });
 
     test("render ThemeSwitcher", () => {

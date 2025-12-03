@@ -4,7 +4,7 @@ import {Icon} from "shared/ui/Icon";
 import LinkedInIcon from "shared/assets/icons/Linkedin.svg";
 import GithubIcon from "shared/assets/icons/GitHub.svg";
 import {ThemeSwitcher} from "shared/ui/ThemeSwitcher";
-import CV from "shared/assets/resource/CV_Denys_Zhyvotov.pdf";
+import My_CV from "shared/assets/resource/CV_Denys_Zhyvotov.pdf";
 import classNames from "classnames";
 
 const LINKEDIN_LINK = "https://www.linkedin.com/in/denys-zhyvotov/";
@@ -24,7 +24,7 @@ export const NavbarActions = ({className, isOpenBurgerMenu}: NavbarActionsProps)
             <section className={cls["navbar-actions-icon-links-container"]}>
                 <a
                     className={cls["navbar-actions-icon-links-container-download-cv"]}
-                    download title={"Download CV"} href={CV || "#"}
+                    download title={"Download CV"} href={My_CV ?? "#"}
                 >
                     <DownloadIcon/>
                 </a>
@@ -33,6 +33,7 @@ export const NavbarActions = ({className, isOpenBurgerMenu}: NavbarActionsProps)
                     className={cls["navbar-actions-icon-links-container-icon-link"]}
                     target={"_blank"}
                     rel={'noreferrer'}
+                    aria-label="LinkedIn"
                 >
                     <Icon Svg={LinkedInIcon}/>
                 </a>
@@ -41,6 +42,7 @@ export const NavbarActions = ({className, isOpenBurgerMenu}: NavbarActionsProps)
                     className={cls["navbar-actions-icon-links-container-icon-link"]}
                     target={"_blank"}
                     rel={'noreferrer'}
+                    aria-label="GitHub"
                 >
                     <Icon Svg={GithubIcon}/>
                 </a>
