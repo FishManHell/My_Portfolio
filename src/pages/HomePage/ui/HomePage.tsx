@@ -7,6 +7,7 @@ import {Footer} from "widgets/Footer";
 import {useMultiFetch} from "shared/libs/hooks";
 import {TechStackItem} from "widgets/TechStack";
 import {Project} from "entities/Projects";
+import {useMemo} from "react";
 
 interface HomePageProps {
     className?: string;
@@ -22,11 +23,20 @@ const HomePage = (props: HomePageProps) => {
 
     const finalResults = mockResults ?? results;
 
+    const projects = useMemo(() => {
+        const list = finalResults?.[1];
+        if (!list) return [];
+
+        return [...list].sort((a, b) =>
+            new Date(b.createdAt!).getTime() - new Date(a.createdAt!).getTime()
+        );
+    }, [finalResults])
+
     return (
         <div className={classNames(cls["home"], className)}>
             <Introduction/>
             <TechStack techStackList={finalResults?.[0]} techStackLoading={loading}/>
-            <Projects projects={finalResults?.[1]} projectsLoading={loading}/>
+            <Projects projects={projects} projectsLoading={loading}/>
             <Footer/>
         </div>
     );

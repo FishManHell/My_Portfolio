@@ -19,7 +19,8 @@ export const projectCard: Project = {
             text: 'View Code'
         }
     ],
-    device_support: ["PC"]
+    device_support: ["PC"],
+    createdAt: new Date(),
 }
 
 export const projectCards = createMockList(projectCard, 3);

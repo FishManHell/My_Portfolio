@@ -16,4 +16,5 @@ export interface Project {
     tech_stack: string[];
     links: PreviewLink[];
     device_support: string[]
+    createdAt: Date;
 }
