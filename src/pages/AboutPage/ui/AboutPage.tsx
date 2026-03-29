@@ -4,7 +4,12 @@ import {SectionHeader} from "shared/ui/SectionHeader";
 import {TimelineCard, TimeLineCard} from "shared/ui/TimelineCard";
 import {useMultiFetch} from "shared/libs/hooks";
 
-type AboutPageData = [TimeLineCard[], TimeLineCard[]]
+
+interface AboutMeResponse {
+    text: string;
+}
+
+type AboutPageData = [TimeLineCard[], TimeLineCard[], AboutMeResponse]
 
 interface AboutPageProps {
     className?: string;
@@ -15,20 +20,14 @@ const AboutPage = (props: AboutPageProps) => {
     const {className, mockResults} = props;
     const {results, loading, error} = useMultiFetch<AboutPageData>([
         {method: "get", url: "/works"},
-        {method: "get", url: "/educations"}
+        {method: "get", url: "/educations"},
+        {method: "get", url: "/about_me"}
     ])
 
     const finalResults = mockResults ?? results;
+    const subtitle = finalResults?.[2]?.text ?? "";
 
-    const subtitle = `Experienced Front-End Developer with over 5+ years of
-                       expertise in creating dynamic, user-friendly web applications
-                       using JavaScript, TypeScript, React, and modern frameworks.
-                       Adept at optimizing user interfaces, collaborating with crossfunctional teams, and delivering high-quality solutions.
-                       Looking to contribute my skills and creativity to challenging
-                       projects`
-
-
-    const timeLineListRenderer = (index: number) => {
+    const timeLineListRenderer = (index: 0 | 1) => {
         if (loading) return (
             <>
                 <TimelineCard loading/>
@@ -36,7 +35,9 @@ const AboutPage = (props: AboutPageProps) => {
                 <TimelineCard loading/>
             </>
         )
-        return finalResults?.[index].map(item => <TimelineCard timelineCard={item} key={item.id}/>) ?? null
+        return finalResults?.[index]?.map(item => (
+            <TimelineCard timelineCard={item} key={item.id} />
+        )) ?? null
     }
 
 

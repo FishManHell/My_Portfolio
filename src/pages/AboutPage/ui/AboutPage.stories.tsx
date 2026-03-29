@@ -14,6 +14,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        mockResults: [[baseExperienceCard], [baseEducationCard]]
+        mockResults: [[baseExperienceCard], [baseEducationCard], {text: "Test"}]
     }
 };
