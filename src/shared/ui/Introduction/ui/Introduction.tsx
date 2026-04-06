@@ -11,7 +11,7 @@ export const Introduction = (props: IntroductionProps) => {
     return (
         <div className={classNames(cls["introduction"], className)} data-testid="introduction">
             <h1 className={cls["introduction-title"]}>
-                Hi <span>👋</span> I’m Denys Zhyvotov, a Front-End / Full-Stack Engineer building modern web applications.
+                Hi <span>👋</span> I&#39;m Denys Zhyvotov, a Front-End / Full-Stack Engineer crafting fast, data-driven web applications.
             </h1>
         </div>
     );
