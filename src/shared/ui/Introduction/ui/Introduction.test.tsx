@@ -6,7 +6,7 @@ describe("Introduction", () => {
         render(<Introduction />);
         const title = screen.getByRole('heading', { level: 1 });
         expect(title).toBeInTheDocument();
-        expect(title).toHaveTextContent("Hi 👋 I’m Denys Zhyvotov, a Front-End / Full-Stack Engineer building modern web applications.");
+        expect(title).toHaveTextContent("Hi 👋 I'm Denys Zhyvotov, a Front-End / Full-Stack Engineer crafting fast, data-driven web applications.");
     });
 
     test("Render with classes", () => {
