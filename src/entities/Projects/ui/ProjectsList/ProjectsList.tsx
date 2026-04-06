@@ -37,7 +37,7 @@ export const ProjectsList = (props: ProjectsListProps) => {
                 containerClass={cls["projects-list-carousel-container"]}
                 itemClass={cls["projects-list-carousel-container-item"]}
             >
-                {projectsLoading && [1, 2, 3].map(i => <ProjectItem loading key={i} />)}
+                {projectsLoading && [1, 2, 3, 4, 5].map(i => <ProjectItem loading key={i} />)}
                 {!projectsLoading && printProjectItems}
             </Carousel>
 
