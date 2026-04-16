@@ -8,6 +8,7 @@ import {useMultiFetch} from "shared/libs/hooks";
 import {TechStackItem} from "widgets/TechStack";
 import {Project} from "entities/Projects";
 import {useMemo} from "react";
+import {sortByCreatedAtDesc} from "helpers/sortByCreatedAtDesc";
 
 interface HomePageProps {
     className?: string;
@@ -27,9 +28,7 @@ const HomePage = (props: HomePageProps) => {
         const list = finalResults?.[1];
         if (!list) return [];
 
-        return [...list].sort((a, b) =>
-            new Date(b.createdAt!).getTime() - new Date(a.createdAt!).getTime()
-        );
+        return sortByCreatedAtDesc(list)
     }, [finalResults])
 
     return (

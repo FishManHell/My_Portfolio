@@ -3,6 +3,7 @@ import classNames from "classnames";
 import {Project, ProjectsList} from "entities/Projects";
 import {useFetch} from "shared/libs/hooks";
 import {useMemo} from "react";
+import {sortByCreatedAtDesc} from "helpers/sortByCreatedAtDesc";
 
 interface ProjectsPageProps {
     className?: string;
@@ -17,9 +18,7 @@ const ProjectsPage = (props: ProjectsPageProps) => {
 
     const sortedProjects = useMemo(() => {
         if (!result) return []
-        return [...result].sort((a, b) => {
-            return new Date(b.createdAt!).getTime() - new Date(a.createdAt!).getTime();
-        });
+        return sortByCreatedAtDesc(result)
     }, [result])
 
     return (
